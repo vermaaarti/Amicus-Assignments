@@ -10,36 +10,38 @@
 
     <title>Form-1</title>
   </head>
-  <body class="mx-3">
+  <body class="mx-4">
     <!--header par-->
     <div class="container-fluid">
       <div class="row">
-        <div class="col my-3">
+        <div class="col my-3 border-bottom">
           <div class="float-start">
-            <h4>Associate Information</h4>
+            <h4 class="mb-4">Associate Information</h4>
           </div>
           <div class="float-end">
-            <button type="button" class="btn btn-success">Save as draft</button>
-            <button type="button" class="btn btn-success">&lt; Previous</button>
-            <button type="button" class="btn btn-success">Next &gt;</button>
+            <button type="button" class="btn btn-success btn-sm">Save as draft</button>
+            <button type="button" class="btn btn-success btn-sm ">&lt; Previous</button>
+            <button type="button" class="btn btn-success btn-sm">Next &gt;</button>
           </div>
         </div>
       </div>
     </div>
     
    
-    <hr>
     <div class="part1 container-fluid ">
         <div class="row">
-       <h4 class="text-success my-3">General Information</h4>
-       <hr>
+       <h4 class="text-success my-3 border-bottom pb-4">General Information</h4>
+       
             <!--first col content starting-->
             <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <form class="needs-validation" novalidate>
  
     <label for="validationCustom01" class="form-label"><b>First Name</b></label>
     <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+    </form></div>
     
+    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+      <form class="needs-validation" novalidate>
     <label for="validationCustom01" class="form-label"><b>GIN#</b></label>
     <input type="text" class="form-control" id="validationCustom01" value="20601726" required>
     
@@ -54,7 +56,10 @@
  
     <label for="validationCustom01" class="form-label"><b>Last Name</b></label>
     <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+    </form></div>
     
+    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+      <form class="needs-validation" novalidate>
     <label for="validationCustom01" class="form-label"><b>Position/Business Title<sub class="text-danger fs-6"><b>*</b></sub></b></label>
     <input type="text" class="form-control" id="validationCustom01" value="NB w/Computer Access" required>
     
@@ -68,7 +73,11 @@
  
     <label for="validationCustom01" class="form-label"><b>Preferred Name</b></label>
     <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-    
+    </form></div>
+
+
+       <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <form class="needs-validation" novalidate>
     <label for="validationCustom01" class="form-label"><b>Country<sub class="text-danger fs-6"><b>*</b></sub></b></label>
     <input type="text" class="form-control" id="validationCustom01" value="United States" required>
     
@@ -82,7 +91,7 @@
      
     <div class="part2 container-fluid">
      <div class="row">
-      <h4 class="text-success my-5">Organisation Information</h4><hr>
+      <h4 class="text-success my-5 border-bottom pb-4">Organisation Information</h4>
       <!--first div content starts here-->
        <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
           <form class=" needs-validation" novalidate>
@@ -94,7 +103,10 @@
   <option value="2">Two</option>
   <option value="3">Three</option>
 </select>
+</form></div>
     
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+  <form class=" needs-validation" novalidate>
 <label for="validationCustom01" class="form-label"><b>Cost Center<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
 <option selected>5020 - IT Mgmt & Admin-1020</option>
@@ -102,7 +114,11 @@
 <option value="2">Two</option>
 <option value="3">Three</option>
 </select>
+</form></div>
 
+
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+  <form class=" needs-validation" novalidate>
 <label for="validationCustom01" class="form-label"><b>Employee Group<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
 <option selected>Non-Buckman</option>
@@ -126,7 +142,10 @@
   <option value="2">Two</option>
   <option value="3">Three</option>
 </select>
-    
+</form></div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+  <form class=" needs-validation" novalidate>    
 <label for="validationCustom01" class="form-label"><b>HR Functional Area<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
 <option selected>Information Technologies</option>
@@ -134,7 +153,10 @@
 <option value="2">Two</option>
 <option value="3">Three</option>
 </select>
+</form></div>
 
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+  <form class=" needs-validation" novalidate>
 <label for="validationCustom01" class="form-label"><b>Employee Subgroup</b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
 <option selected>Temporary / Seasonal</option>
@@ -142,9 +164,7 @@
 <option value="2">Two</option>
 <option value="3">Three</option>
 </select>
-    
   </form>
-
         </div>
         <!--second div content ends here-->
         <!--third div content starts here-->
@@ -158,7 +178,10 @@
   <option value="2">Two</option>
   <option value="3">Three</option>
 </select>
-    
+</form></div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+  <form class=" needs-validation" novalidate>    
 <label for="validationCustom01" class="form-label"><b>Industry/BU<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
 <option selected>Informational Technologies</option>
@@ -166,7 +189,10 @@
 <option value="2">Two</option>
 <option value="3">Three</option>
 </select>
+</form></div>
 
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+          <form class=" needs-validation" novalidate>
 <label for="validationCustom01" class="form-label"><b>Subarea<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
 <option selected>3000 - IT</option>
@@ -175,7 +201,7 @@
 <option value="3">Three</option>
 </select>
     
-  </form>
+  </form></div>
 
         </div>
         <!--third div content ends here-->
@@ -183,30 +209,30 @@
      </div>   
     </div>  <!--part2 ends here-->
     
-    <div class="part3 container-fluid">
+    <div class="part3 container-fluid mb-5">
       <div class="row">
-        <h4 class="text-success">Additional Information</h4> 
+        <h4 class="text-success my-5 border-bottom pb-3">Additional Information</h4> 
 
         <!--div first content start-->
         <div class="col-lg-4 col-md-6 col-sm-12">
           <label class="form-check-label"><b> Company Car<sub class="text-danger fs-6"><b>*</b></sub></b></label>
           <div class="">
-          <div class="form-check float-start">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="Radio1" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">Yes</label>
           </div>
-          <div class="form-check float-end">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="Radio1" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">No</label>
-          </div></div><br /><br />
+          </div></div><br />
           <label class="form-check-label"><b> Company Credit Card<sub class="text-danger fs-6"><b>*</b></sub></b></label>
           <div class="">
-          <div class="form-check float-start">
-            <input class="form-check-input" type="radio" name="Radio1" id="flexRadioDefault1">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Radio2" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">Yes</label>
           </div>
-          <div class="form-check float-end">
-            <input class="form-check-input" type="radio" name="Radio1" id="flexRadioDefault1">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Radio2" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">No</label>
           </div></div>
           
@@ -215,24 +241,24 @@
 
          <!--div second content start-->
          <div class="col-lg-4 col-md-6 col-sm-12">
-          <label class="form-check-label"><b> Std. BL Vacation Policy</b></label>
+          <label class="form-check-label mt-sm-4 mt-md-0 mt-lg-0 mb-2"><b> Std. BL Vacation Policy</b></label>
           <div class="">
-          <div class="form-check float-start">
-            <input class="form-check-input" type="radio" name="Radio1" id="flexRadioDefault1">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Radio3" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">Yes</label>
           </div>
-          <div class="form-check float-end">
-            <input class="form-check-input" type="radio" name="Radio1" id="flexRadioDefault1">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Radio3" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">No</label>
-          </div></div><br /><br />
+          </div></div><br />
           <label class="form-check-label"><b>Should associate be required to submit CTC<sub class="text-danger fs-6"><b>*</b></sub></b></label>
           <div class="">
-          <div class="form-check float-start">
-            <input class="form-check-input" type="radio" name="Radio1" id="flexRadioDefault1">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Radio4" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">Yes</label>
           </div>
-          <div class="form-check float-end">
-            <input class="form-check-input" type="radio" name="Radio1" id="flexRadioDefault1">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Radio4" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">No</label>
           </div></div>
           
@@ -241,7 +267,7 @@
         <!--third div content starts here-->
         <div class="col-lg-4 col-md-6 col-sm-12">
           <!-- <span class="input-group-text">With textarea</span> -->
-          <label class="form-check-label"><b>Std. BL Vacation Policy Comment</b></label>
+          <label class="form-check-label mt-sm-4 mt-md-5 mt-lg-2 mb-2"><b>Std. BL Vacation Policy Comment</b></label>
           <textarea class="form-control" aria-label="With textarea"></textarea>
         </div>
         <!--third div content ends here-->
