@@ -22,52 +22,69 @@
         }
     </style> -->
    
+    <!-- css for sub-accordian part -->
+    <style>
+    .demo {
+      margin: 20px;
+    }
+    .accordion .fa {
+      margin-right: 0.5rem;
+    }
+    .accordion button, .accordion button:hover, .accordion button:focus{
+      text-decoration: none;
+    }
+    </style>
+    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">    
   </head>
   <body class="m-3">
     <!--part1 start-->
    <div class="part1 container-fluid">
     <div class="row">
-    <div class="col">
-    <div class="float-start">
-        <h3>Ravi Kukreja</h3>
+    <div class="col mt-5">
+    <div class="float-start ms-5">
+        <p class="fs-3">Ravi Kukreja</p>
         <p class="text-success">SAP # 20601726</p>
         <p><u>rkukreja@buckman.com</u></p>
     </div>
-    <div class="float-end">
+    <div class="float-end me-5">
         <!-- <button type="button" class="btn-pill">Status</button> -->
-        <button type="button" class="btn btn-success" style="border-radius: 15%;">Initiate a new change request &gt;</button>
+        <p><span class="ms-5 me-5">Status:</span><span class="ms-5 me-5">Active</span><span class="ms-5 me-5">Effective Since</span>
+
+        <button type="button" class="btn btn-success" style="border-radius: 15px;">Initiate a new change request &gt;</button></p>
     </div>
     </div>
     </div>
    </div>
      <!--part1 ends-->
        <!--part2 starts-->
-       <div class="container-fluid">
+       <div style="background-color: rgb(240, 241, 245);" class="container-fluid">
         <div class="row">
-         <div class="col">
+         <div class="col mt-5">
             <div class="float-start">
-                <button type="button" class="btn btn-outline-success"><b>&lt; Back to Associate Listing</b></button>    
+                <button type="button" class="btn btn-outline-success ms-5" style="border-radius: 15px;"><b>&lt; Back to Associate Listing</b></button> 
+                <!-- <button type="button" class="btn btn-outline-success">Success</button>    -->
             </div>
-            <div class="float-end">
-             <a href="" class="text-success"><b>Collapse All</b></a>
-             <a href="" class="text-success ms-4"><b>Expand All</b></a>   
+            <div class="float-end me-5">
+             <a href="" class="text-success"><b><u>Collapse All</u></b></a>
+             <a href="" class="text-success ms-4"><b><u>Expand All</u></b></a>   
             </div>    
          </div>   
         </div>
-       </div>
+       <!-- </div> -->
         <!--part2 ends-->
          <!--part3 starts-->
-         <div class="container-fluid">
-            <div class="row">
+         <!-- <div class="container-fluid"> -->
+            <!-- <div class="row">
              <div class="col">
                 
                 </div>
                 </div>
-                </div> 
+                </div>  -->
           <!--part3 ends-->
           <!---part4 starts-->
-          <div class="part4 container-fluid">
+          <!-- <div class="part4 container-fluid"> -->
             <div class="row">
               <div class="col">
                 <!-- <div class="" > -->
@@ -216,7 +233,7 @@
                               </table>  
                               
                               <p class="text-success mb-5"><b>MPC</b></p>
-                              <table class="table table-bordered">
+                              <table class="table table-borderless">
                                 <tbody>
                                   <tr>
                                     <td scope="row"><p class="float-start text-success">INDIVIDUAL MPC</td>
@@ -225,10 +242,10 @@
                                         <td scope="row"><p class="float-start text-success">PAYOUT FREQUENCY</td>      
                                     </tr>                         
                                 </tbody>
-                              </table>                              
+                              </table> <hr>                             
                               <p class="text-center">No Records Found</p>   
 
-                              <table class="table table-bordered">
+                              <table class="table table-borderless">
                                 <tbody>
                                   <tr>
                                     <td scope="row"><p class="float-start text-success">TEAM MPC</td>
@@ -237,10 +254,10 @@
                                         <td scope="row"><p class="float-start text-success">PAYOUT FREQUENCY</td>      
                                     </tr>                         
                                 </tbody>
-                              </table>                              
+                              </table> <hr>                             
                               <p class="text-center">No Records Found</p> 
 
-                              <table class="table table-bordered">
+                              <table class="table table-borderless">
                                 <tbody>
                                   <tr>
                                     <td scope="row"><p class="float-start text-success">OTHER MPC</td>
@@ -249,10 +266,95 @@
                                         <td scope="row"><p class="float-start text-success">PAYOUT FREQUENCY</td>      
                                     </tr>                         
                                 </tbody>
-                              </table>                              
+                              </table> <hr>                             
                               <p class="text-center">No Records Found</p> 
 
                          <p class="text-success mb-5"><b>Existing MPC Notes</b></p>
+                          
+                         <div class="demo">
+                          <div class="accordion" id="accordionExample">
+                            <div class="card">
+                              <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                  <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"><p class="text-dark"><b><i class="fa fa-plus"></i> Transition Pay</b></p></button>
+                                </h2>
+                              </div>
+                              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                  
+                                  <table class="table table-borderless">
+                                    <tbody>
+                                      <tr>
+                                        <td scope="row"><p class="float-start text-success">PAY DESCRIPTION</td>
+                                        <td scope="row"><p class="float-start text-success">AMOUNT</td>
+                                          <td scope="row"><p class="float-start text-success">FREQUENCY</td>
+                                            <td scope="row"><p class="float-start text-success">DURATION</td> 
+                                              <td scope="row"><p class="float-start text-success">UPDATED ON</td>          
+                                        </tr>                         
+                                    </tbody>
+                                  </table> <hr>  <p class="text-center">No Records Found</p>     
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"><p class="text-dark"><b><i class="fa fa-plus"></i> Sales Territories</b></p></button>
+                                </h2>
+                              </div>
+                              <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                
+                                  <div class="card-body">
+                                  
+                                    <table class="table table-borderless">
+                                      <tbody>
+                                        <tr>
+                                          <td scope="row"><p class="float-start text-success">PAY DESCRIPTION</td>
+                                          <td scope="row"><p class="float-start text-success">AMOUNT</td>
+                                            <td scope="row"><p class="float-start text-success">FREQUENCY</td>
+                                              <td scope="row"><p class="float-start text-success">DURATION</td> 
+                                                <td scope="row"><p class="float-start text-success">UPDATED ON</td>          
+                                          </tr>                         
+                                      </tbody>
+                                    </table> <hr>  <p class="text-center">No Records Found</p>     
+  
+                                  </div>     
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"><p class="text-dark"><b><i class="fa fa-plus"></i> Rule Matrics</b></p></button>
+                                </h2>
+                              </div>
+                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+     
+                                  <div class="card-body">
+                                  
+                                    <table class="table table-borderless">
+                                      <tbody>
+                                        <tr>
+                                          <td scope="row"><p class="float-start text-success">PAY DESCRIPTION</td>
+                                          <td scope="row"><p class="float-start text-success">AMOUNT</td>
+                                            <td scope="row"><p class="float-start text-success">FREQUENCY</td>
+                                              <td scope="row"><p class="float-start text-success">DURATION</td> 
+                                                <td scope="row"><p class="float-start text-success">UPDATED ON</td>          
+                                          </tr>                         
+                                      </tbody>
+                                    </table> <hr>  <p class="text-center">No Records Found</p>     
+  
+                                  </div>         
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
                             </div>
                           </div>
@@ -269,7 +371,7 @@
                           <div class="panel-collapse collapse" id="Examplethree">
                             <div class="panel-body">
                           
-                              <table class="table table-bordered">
+                              <table class="table table-borderless">
                                 <tbody>
                                   <tr>
                                     <td scope="row"><p class="text-success">REQUEST ID #</p></td>
@@ -472,6 +574,37 @@
           $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
         });       
       });
+      </script>
+      <!-- script for sub-accordian part -->
+      <script>
+        $(document).ready(function () {
+  // Add minus icon for collapse element which is open by default
+  $(".collapse.show").each(function () {
+    $(this)
+      .prev(".card-header")
+      .find(".fa")
+      .addClass("fa-minus")
+      .removeClass("fa-plus");
+  });
+
+  // Toggle plus minus icon on show hide of collapse element
+  $(".collapse")
+    .on("show.bs.collapse", function () {
+      $(this)
+        .prev(".card-header")
+        .find(".fa")
+        .removeClass("fa-plus")
+        .addClass("fa-minus");
+    })
+    .on("hide.bs.collapse", function () {
+      $(this)
+        .prev(".card-header")
+        .find(".fa")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+    });
+});
+
       </script>
    
   </body>
