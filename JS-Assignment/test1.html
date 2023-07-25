@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <script>
+
+function myFunction(myinputarr){
+    var size = 5; // Array size
+    for(var i=1; i<=size; i++) {  
+    myinputarr[i] = prompt('Enter array Element ' + i);
+}
+for(var i=1; i<=size; i++) {
+if(myinputarr[i]%2==0){console.log("Yes " + myinputarr[i] + " is even");}
+}
+}
+ 
+var myinputarr = [];
+
+myFunction(myinputarr);
+
+  </script>
+
+</body>
+</html>
