@@ -38,19 +38,19 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">    
   </head>
-  <body class="m-3">
+  <body class=""  style="background-color: rgb(240, 241, 245);">
     <!--part1 start-->
-   <div class="part1 container-fluid">
+   <div class="part1 container-fluid bg-light">
     <div class="row">
-    <div class="col mt-5">
-    <div class="float-start ms-5">
-        <p class="fs-3">Ravi Kukreja</p>
-        <p style="color: #198754;" >SAP # 20601726</p>
-        <p><u>rkukreja@buckman.com</u></p>
+    <div class="col mt-3">
+    <div class="float-lg-start ps-5 pb-4">
+        <div class="fs-3">Ravi Kukreja</div>
+        <div style="color: #198754;" >SAP # 20601726</div>
+        <div><u>rkukreja@buckman.com</u></div>
     </div>
-    <div class="float-end me-5">
+    <div class="float-lg-end pe-5 mt-4">
         <!-- <button type="button" class="btn-pill">Status</button> -->
-        <p><span class="ms-5 me-5">Status:</span><button type="button" class=" btn ms-5 me-5" style="background-color: rgb(168, 232, 224);border-radius: 15px;" ><i class="fa-solid fa-circle text-success"></i>&nbsp;&nbsp;Active</button><span class="ms-4 me-4">Effective Since</span>
+        <p><span class="ms-0 me-0 ms-md-4 me-md-4">Status:</span><button type="button" class=" btn ms-3 me-3" style="background-color: rgb(168, 232, 224);border-radius: 15px;" ><i class="fa-solid fa-circle text-success"></i>&nbsp;&nbsp;Active</button><span class="ms-4 me-4">Effective Since</span>
 
         <button type="button" class="btn btn-success bg-success" style="border-radius: 15px;">Initiate a new change request &gt;</button></p>
     </div>
@@ -59,16 +59,16 @@
    </div>
      <!--part1 ends-->
        <!--part2 starts-->
-       <div style="background-color: rgb(240, 241, 245);" class="container-fluid">
-        <div class="row">
+       <div class="container-fluid ">
+        <div class="row" >
          <div class="col mt-5">
-            <div>
+           
                 <button type="button" class="btn ms-5" style="border-radius: 15px;border: 1px solid #198754;color:#198754;"><b>&lt; Back to Associate Listing</b></button> 
                 <!-- <button type="button" class="btn btn-outline-success">Success</button>    -->
-            </div>
-            <div class="float-end me-5">
-             <a href="" class="text-success"><b><u>Collapse All</u></b></a>
-             <a href="" class="text-success ms-4"><b><u>Expand All</u></b></a>   
+          
+            <div class="float-lg-end me-5">
+             <a href="" class="text-success  mt-md-0 mt-sm-5"><b><u>Collapse All</u></b></a>
+             <a href="" class="text-success ps-4  mt-md-0 mt-sm-5"><b><u>Expand All</u></b></a>   
             </div>    
          </div>   
         </div>
@@ -76,10 +76,10 @@
             <div class="row">
               <div class="col">
              
-                    <div class="container mt-5">
-                        <div class="panel-group" id="accordion1">
-                        <div class="panel panel-default">
-                          <div class="panel-heading px-4">
+                    <div class="container mt-5 m-0 p-0">
+                        <div style="margin-right: -100px;" class="panel-group ps-5" id="accordion1">
+                        <div class="panel panel-default ">
+                          <div class="panel-heading bg-white">
                             <h4 class="panel-title">
                               <button class="btn btn-link text-decoration-none" data-target="#Exampleone" data-toggle="collapse" data-parent="#accordion1">
                                 <p><b><span class="glyphicon glyphicon-plus text-success"></span>
@@ -91,78 +91,81 @@
                             <div class="panel-body">
                            
                               <p class="text-success"><b>General Information</b></p>
+                            
                               <div class="table-responsive">
-                              <table class="table table-borderless">
+                              <table style="min-width: 100%;" class="table table-borderless">
                                 <tbody>
                                   <tr>
-                                    <td><p><b>First Name:</b></p></td><td> <p>Ravi</p></td>
-                                    <td ><p><b>GIN#:</b></p></td><td> <p>20601726</p></td>
+                                    <td style="width: 25%;"><p><b>First Name:</b></p></td><td style="width: 25%;border-right: 1px solid rgb(230, 224, 224);"> <p>Ravi</p></td>
+                                    <td style="width: 25%;" ><p><b>GIN#:</b></p></td><td style="width: 25%;"> <p>20601726</p></td>
                                     </tr>
                                   <tr>
-                                    <td scope="row"><p><b>Last Name:</b></p></td><td> <p>Kukreja</p></td>
-                                    <td scope="row" style="border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Country:</b></p></td><td style="border-bottom: 1px solid rgb(230, 224, 224);"> <p>United States</p></td>                                  
+                                    <td  style="width: 25%;"><p><b>Last Name:</b></p></td><td style="border-right: 1px solid rgb(230, 224, 224);"> <p>Kukreja</p></td>
+                                    <td  style="width: 25%;border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Country:</b></p></td><td  style="width: 25%;border-bottom: 1px solid rgb(230, 224, 224);"> <p>United States</p></td>                                  
                                   </tr>
                                   <tr>
-                                    <td scope="row"><p><b>Preferred Name:</b></p></td><td style="border-right: 1px solid rgb(230, 224, 224);"> <p>Ravi</p></td>                                 
+                                    <td  style="width: 25%;"><p><b>Preferred Name:</b></p></td><td style="border-right: 1px solid rgb(230, 224, 224);"> <p>Ravi</p></td>                                 
                                   </tr>
                                   <tr>
-                                    <td scope="row" style="border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Position/Business Title:</b></p></td><td style="border-right: 1px solid rgb(230, 224, 224); border-bottom: 1px solid rgb(230, 224, 224);"> <p>NB w/Computer Access</p></td>                                 
+                                    <td  style="width: 25%; border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Position/Business Title:</b></p></td><td  style="width: 25%; border-right: 1px solid rgb(230, 224, 224); border-bottom: 1px solid rgb(230, 224, 224);"> <p>NB w/Computer Access</p></td>                                 
                                   </tr>
                                  
                                 </tbody>
-                              </table>  </div>  
+                              </table>  </div>
                               <p class="text-success"><b>Organisation Information</b></p>
-                              <table class="table table-borderless">
+                              <div class="table-responsive">
+                              <table style="min-width:100%" class="table table-borderless">
                                 <tbody>
                                   <tr>
-                                    <td scope="row"><p><b>Company:</b></p></td><td> <p>1020 - International</p></td>
-                                    <td scope="row"><p><b>Subarea:</b></p></td><td> <p>IT</p></td>
+                                    <td  style="width: 25%;"><p><b>Company:</b></p></td><td  style="width: 25%; border-right: 1px solid rgb(230, 224, 224);"> <p>1020 - International</p></td>
+                                    <td  style="width: 25%;"><p><b>Subarea:</b></p></td><td  style="width: 25%;"> <p>IT</p></td>
                                     </tr>
                                   <tr>
-                                    <td scope="row"><p><b>Manager Name:</b></p> </td><td><p>Ayobamidele Olaniyi</p></td>
-                                    <td scope="row"><p><b>Manager Company:</b></p></td><td> <p>1020 - International</p></td>                                  
+                                    <td  style="width: 25%;"><p><b>Manager Name:</b></p> </td><td  style="width: 25%; border-right: 1px solid rgb(230, 224, 224);"><p>Ayobamidele Olaniyi</p></td>
+                                    <td  style="width: 25%;"><p><b>Manager Company:</b></p></td><td  style="width: 25%;"> <p>1020 - International</p></td>                                  
                                   </tr>
                                   <tr>
-                                    <td scope="row"><p><b>Cost Center:</b></p></td><td> <p>IT Management & Administration - 1020</p></td>
-                                    <td scope="row"><p><b>Cost Center Code:</b></p> </td><td><p>5020</p></td>                                 
+                                    <td  style="width: 25%;"><p><b>Cost Center:</b></p></td><td  style="width: 25%; border-right: 1px solid rgb(230, 224, 224);"> <p>IT Management & Administration - 1020</p></td>
+                                    <td  style="width: 25%;"><p><b>Cost Center Code:</b></p> </td><td  style="width: 25%;"><p>5020</p></td>                                 
                                   </tr>
                                   <tr>
-                                    <td scope="row"><p><b>HR Functional Area:</b></p></td><td> <p>Information Technologies</p></td>
-                                    <td scope="row"><p><b>Organizational Unit:</b></p></td><td> <p>30000035 - Datacenter and Applications</p></td>                                 
+                                    <td  style="width: 25%;"><p><b>HR Functional Area:</b></p></td><td  style="width: 25%; border-right: 1px solid rgb(230, 224, 224);"> <p>Information Technologies</p></td>
+                                    <td  style="width: 25%;"><p><b>Organizational Unit:</b></p></td><td  style="width: 25%;"> <p>30000035 - Datacenter and Applications</p></td>                                 
                                   </tr>
                                   <tr>
-                                    <td scope="row"><p><b>Employee Group:</b></p></td><td> <p>Non-Buckman</p></td>
-                                    <td scope="row" style="border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Employee Subgroup:</b></p></td><td style="border-bottom: 1px solid rgb(230, 224, 224);" > <p>Temporary / Seasonal</p></td>                                 
+                                    <td  style="width: 25%; border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Employee Group:</b></p></td><td style="border-right: 1px solid rgb(230, 224, 224);"> <p>Non-Buckman</p></td>
+                                    <td  style="width: 25%; border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Employee Subgroup:</b></p></td><td  style="width: 25%; border-bottom: 1px solid rgb(230, 224, 224);" > <p>Temporary / Seasonal</p></td>                                 
                                   </tr>
                                   <tr>
-                                    <td scope="row" style="border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Industry/BU:</b></p></td><td style="border-bottom: 1px solid rgb(230, 224, 224);"> <p>Information Technologies</p></td>                    
+                                    <td  style="width: 25%; border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Industry/BU:</b></p></td><td  style="width: 25%; border-bottom: 1px solid rgb(230, 224, 224); border-right: 1px solid rgb(230, 224, 224);"> <p>Information Technologies</p></td>                    
                                   </tr>
                                  
                                 </tbody>
-                              </table>
+                              </table></div>
                               <p class="text-success"><b>Additional Information</b></p>
-                              <table class="table table-borderless">
+                              <div class="table-responsive">
+                              <table style="min-width: 100%;" class="table table-borderless">
                                 <tbody>
                                   <tr>
-                                    <td scope="row"><p><b>NA Auto Group:</b></p> </td><td><p> </p></td>
-                                    <td scope="row"><p><b>Company Credit Card:</b></p> </td><td><p>No</p></td>
+                                    <td  style="width: 25%;"><p><b>NA Auto Group:</b></p> </td><td  style="width: 25%;border-right: 1px solid rgb(230, 224, 224);"><p> </p></td>
+                                    <td  style="width: 25%;"><p><b>Company Credit Card:</b></p> </td><td  style="width: 25%;"><p>No</p></td>
                                      </tr>
                                   <tr>
-                                    <td scope="row"><p><b>Est. Mileage/year:</b></p></td><td> <p> </p></td> 
-                                    <td scope="row"><p><b>Std BL Vacation Policy:</b></p> </td><td><p>Yes</p></td>                                
+                                    <td  style="width: 25%;"><p><b>Est. Mileage/year:</b></p></td><td  style="width: 25%;border-right: 1px solid rgb(230, 224, 224);"> <p> </p></td> 
+                                    <td  style="width: 25%;"><p><b>Std BL Vacation Policy:</b></p> </td><td  style="width: 25%;"><p>Yes</p></td>                                
                                   </tr>
                                   <tr>
-                                    <td scope="row"><p><b>Std BL Vacation Policy Comment:</b></p></td><td> <p> </p></td> 
-                                    <td scope="row"><p><b>Should associate be required to submit CTC?</b></p></td><td> <p>No</p></td>                                
+                                    <td  style="width: 25%;"><p><b>Std BL Vacation Policy Comment:</b></p></td><td  style="width: 25%;border-right: 1px solid rgb(230, 224, 224);"> <p> </p></td> 
+                                    <td  style="width: 25%;"><p><b>Should associate be required to submit CTC?</b></p></td><td  style="width: 25%;"> <p>No</p></td>                                
                                   </tr>                      
                                 </tbody>
-                              </table>
+                              </table></div>
 
                             </div>
                           </div>
                          </div>
-                         <div class="panel panel-default">
-                          <div class="panel-heading">
+                         <div class="panel panel-default my-4">
+                          <div class="panel-heading  bg-white">
                             <h4 class="panel-title">
                               <button class="btn btn-link text-decoration-none" data-target="#Exampletwo" data-toggle="collapse" data-parent="#accordion1">
                                 <p><b><span class="glyphicon glyphicon-plus text-success"></span>
@@ -174,17 +177,19 @@
                             <div class="panel-body">
                            
                               <p class="text-success"><b>General Information</b></p>
-                              <table class="table table-borderless">
+                             
+                              <div class="table-responsive">
+                              <table style="min-width: 100%;" class="table table-borderless">
                                 <tbody>
                                   <tr>
-                                    <td><p><b>Currency:</b></p></td><td><p>US Dollar</p></td>
+                                    <td><p><b>Currency:</b></p></td><td style="border-right: 1px solid rgb(230, 224, 224);"><p>US Dollar</p></td>
                                     <td><p><b>Salary(Annual):</b></p></td><td> <p></p></td>
                                     </tr>
                                   <tr>
-                                    <td><p><b>Division/Playbook:</b></p></td><td> <p>PTNA</p></td>
+                                    <td><p><b>Division/Playbook:</b></p></td><td style="border-right: 1px solid rgb(230, 224, 224);"> <p>PTNA</p></td>
                                     <td><p><b>Olatform Role & Pay Level:</b></p></td><td><p>Account Manager LEVEL3</p></td>                                  
                                   </tr>
-                                  <tr><td><p><b>Needs PCF:</b></p> </td><td><p class=""><div class="form-check">
+                                  <tr><td><p><b>Needs PCF:</b></p> </td><td style="border-right: 1px solid rgb(230, 224, 224);"><p class=""><div class="form-check">
                                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         </div></p></td>
                                     <td><p><b>Is SMG(Strategic Marketing Group):</b></p> </td><td><p><div class="form-check">
@@ -192,55 +197,59 @@
                                         </div></p></td>                                 
                                   </tr>
                                   <tr>
-                                    <td><p><b>Payroll & Allowances Effective Date:</b></p></td><td> <p>06/01/2022</p></td>
+                                    <td><p><b>Payroll & Allowances Effective Date:</b></p></td><td style="border-right: 1px solid rgb(230, 224, 224);"> <p>06/01/2022</p></td>
                                     <td><p><b>Metric Effective Date:</b></p></td><td> <p>05/01/2023</p></td>                                 
                                   </tr>
                                   <tr>
-                                    <td><p><b>Any Deviation:</b></p> </td><td><p>-</p></td>
-                                    <td><p><b>Deviation Approved:</b></p></td><td> <p>-</p></td>                                 
+                                    <td><p><b>Any Deviation:</b></p> </td><td style="border-right: 1px solid rgb(230, 224, 224);"><p>-</p></td>
+                                    <td style="border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Deviation Approved:</b></p></td><td style="border-bottom: 1px solid rgb(230, 224, 224);"> <p>-</p></td>                                 
                                   </tr>
                                   <tr>
-                                    <td><p><b>Approval Attached:</b></p></td><td> <p>-</p></td>                    
+                                    <td style="border-bottom: 1px solid rgb(230, 224, 224);"><p><b>Approval Attached:</b></p></td><td style="border-right: 1px solid rgb(230, 224, 224);border-bottom: 1px solid rgb(230, 224, 224);"> <p>-</p></td>                    
                                   </tr>
                                  
                                 </tbody>
-                              </table>  
+                              </table> </div>
                               
-                              <p class="text-success mb-5"><b>MPC</b></p>
-                              <table class="table table-borderless">
-                                <tbody>
-                                  <tr class="text-center">
-                                    <td><p class="text-success">INDIVIDUAL MPC</td>
-                                    <td><p class="text-success">METRIC RANGE</td>
-                                      <td><p class="text-success">COMMISSION RATE %</td>
-                                        <td><p class="text-success">PAYOUT FREQUENCY</td>      
+                              <p class="text-success mb-5 ms-3"><b>MPC</b></p>
+                              <div class="table-responsive">
+                              <table style="min-width: 100%;" class="table table-borderless mb-0">
+                                <tbody class="">
+                                  <tr style="margin-left: -120px;">
+                                    <td style="width: 25%;"><p class="text-success">INDIVIDUAL MPC</td>
+                                    <td  style="width: 25%;"><p class="text-success">METRIC RANGE</td>
+                                      <td  style="width: 25%;"><p class="text-success">COMMISSION RATE %</td>
+                                        <td  style="width: 25%;"><p class="text-success">PAYOUT FREQUENCY</td>      
                                     </tr>                         
                                 </tbody>
-                              </table> <hr>                             
+                              </table></div>
+                                <hr>                             
                               <p class="text-center">No Records Found</p>   
 
-                              <table class="table table-borderless">
+                              <div class="table-responsive">
+                              <table style="min-width: 100%;" class="table table-borderless mb-0">
                                 <tbody>
-                                  <tr class="text-center">
-                                    <td><p class="text-success">TEAM MPC</td>
-                                    <td><p class="text-success">METRIC RANGE</td>
-                                      <td><p class="text-success">COMMISSION RATE %</td>
-                                        <td><p class="text-success">PAYOUT FREQUENCY</td>      
+                                  <tr style="margin-left: -120px;">
+                                    <td  style="width: 25%;"><p class="text-success">TEAM MPC</td>
+                                    <td  style="width: 25%;"><p class="text-success">METRIC RANGE</td>
+                                      <td  style="width: 25%;"><p class="text-success">COMMISSION RATE %</td>
+                                        <td  style="width: 25%;"><p class="text-success">PAYOUT FREQUENCY</td>      
                                     </tr>                         
                                 </tbody>
-                              </table> <hr>                             
+                              </table></div> <hr>                             
                               <p class="text-center">No Records Found</p> 
 
-                              <table class="table table-borderless">
+                              <div class="table-responsive">
+                              <table style="min-width: 100%;" class="table table-borderless mb-0">
                                 <tbody>
-                                  <tr class="text-center">
-                                    <td><p class="text-success">OTHER MPC</td>
-                                    <td><p class="text-success">METRIC RANGE</td>
-                                      <td><p class="text-success">COMMISSION RATE %</td>
-                                        <td><p class="text-success">PAYOUT FREQUENCY</td>      
+                                  <tr style="margin-left: -120px;">
+                                    <td  style="width: 25%;"><p class="text-success">OTHER MPC</td>
+                                    <td  style="width: 25%;"><p class="text-success">METRIC RANGE</td>
+                                      <td  style="width: 25%;"><p class="text-success">COMMISSION RATE %</td>
+                                        <td  style="width: 25%;"><p class="text-success">PAYOUT FREQUENCY</td>      
                                     </tr>                         
                                 </tbody>
-                              </table> <hr>                             
+                              </table></div> <hr>                             
                               <p class="text-center">No Records Found</p> 
 
                          <p class="text-success mb-5"><b>Existing MPC Notes</b></p>
@@ -248,41 +257,42 @@
                          <div class="demo">
                           <div class="accordion" id="accordionExample">
                             <div class="card">
-                              <div class="card-header" id="headingOne">
+                              <div  style="background-color: white;" class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                  <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"><p class="text-dark"><b><i class="fa-solid fa-circle-plus" style="color: green;"></i> Transition Pay</b></p></button>
+                                  <button type="button" style="border: none;" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"><p class="text-dark"><b><i class="fa-solid fa-circle-plus" style="color: green;"></i> Transition Pay</b></p></button>
                                 </h2>
                               </div>
                               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                   
-                                  <table class="table table-borderless">
+                                  <div class="table-responsive">
+                                  <table style="min-width: 100%;" class="table table-borderless mb-0">
                                     <tbody>
                                       <tr class="text-center">
-                                        <td><p class="float-start text-success">PAY DESCRIPTION</td>
-                                        <td><p class="float-start text-success">AMOUNT</td>
-                                          <td><p class="float-start text-success">FREQUENCY</td>
-                                            <td><p class="float-start text-success">DURATION</td> 
-                                              <td><p class="float-start text-success">UPDATED ON</td>          
+                                        <td style="width: 20%;"><p class="float-start text-success">PAY DESCRIPTION</td>
+                                        <td style="width: 20%;"><p class="float-start text-success">AMOUNT</td>
+                                          <td style="width: 20%;"><p class="float-start text-success">FREQUENCY</td>
+                                            <td style="width: 20%;"><p class="float-start text-success">DURATION</td> 
+                                              <td style="width: 20%;"><p class="float-start text-success">UPDATED ON</td>          
                                         </tr>                         
                                     </tbody>
-                                  </table> <hr>  <p class="text-center">No Records Found</p>     
+                                  </table></div> <hr>  <p class="text-center">No Records Found</p>     
 
                                 </div>
                               </div>
                             </div>
                             
                             <div class="card">
-                              <div class="card-header" id="headingTwo">
+                              <div style="background-color: white;" class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
-                                  <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"><p class="text-dark"><b><i class="fa-solid fa-circle-plus" style="color: green;"></i> Sales Territory</b></p></button>
+                                  <button style="border: none;" type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"><p class="text-dark"><b><i class="fa-solid fa-circle-plus" style="color: green;"></i> Sales Territory</b></p></button>
                                 </h2>
                               </div>
                               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                 <div class="card-body">
                                   <form role="search">
 
-                                    <div class="d-flex align-items-center" style="flex-direction: row-reverse; gap: 1rem;">
+                                    <div class="d-flex align-items-center mb-4" style="flex-direction: row-reverse; gap: 1rem;">
             
                                         <input class="form-control me-2" style="width: 20%;" type="search" aria-label="Search">
             
@@ -292,7 +302,7 @@
             
                                 </form>
                                   <div class="table-responsive">
-                                    <table style="min-width: 100px;"  class="table table-borderless">
+                                    <table style="min-width: 100px;"  class="table table-borderless mb-0">
                                       <tbody>
                                         <tr class="text-center">
                                           <td style="min-width: 10rem;"><p class="text-success">SAP# - CUSTOMER / DIVISION</td>
@@ -319,9 +329,9 @@
                             </div>       
 
                             <div class="card">
-                              <div class="card-header" id="headingThree">
+                              <div style="background-color: white;" class="card-header" id="headingThree">
                                 <h2 class="mb-0">
-                                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"><p class="text-dark"><b><i class="fa-solid fa-circle-plus" style="color: green;"></i> Rule Matrics</b></p></button>
+                                  <button style="border: none;" type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"><p class="text-dark"><b><i class="fa-solid fa-circle-plus" style="color: green;"></i> Rule Matrics</b></p></button>
                                 </h2>
                               </div>
                               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
@@ -329,17 +339,20 @@
      
                                   <div class="card-body">
                                   
-                                    <table class="table table-borderless">
+                                    <div class="table-responsive">
+                                    <table style="min-width: 100%;" class="table table-borderless mb-0">
                                       <tbody>
                                         <tr class="text-center">
-                                          <td><p class="float-start text-success">PAY DESCRIPTION</td>
-                                          <td><p class="float-start text-success">AMOUNT</td>
-                                            <td><p class="float-start text-success">FREQUENCY</td>
-                                              <td><p class="float-start text-success">DURATION</td> 
-                                                <td><p class="float-start text-success">UPDATED ON</td>          
+                                          <td><p class="float-start text-success">RULE</td>
+                                          <td ><p class="float-start text-success">MERTIC</td>
+                                            <td><p class="float-start text-success">COMMISSION RATE %</td>
+                                              <td><p class="float-start text-success">METRIC TYPE</td> 
+                                                <td><p class="float-start text-success">START DATE</td>
+                                          <td><p class="float-start text-success">END DATE</td>
+                                            <td><p class="float-start text-success">COMMENTS</td>                    
                                           </tr>                         
                                       </tbody>
-                                    </table> <hr>  <p class="text-center">No Records Found</p>     
+                                    </table></div> <hr>  <p class="text-center">No Records Found</p>     
   
                                   </div>         
 
@@ -353,7 +366,7 @@
                           </div>
                          </div>
                          <div class="panel panel-default">
-                          <div class="panel-heading">
+                          <div class="panel-heading  bg-white">
                             <h4 class="panel-title">
                               <button class="btn btn-link text-decoration-none" data-target="#Examplethree" data-toggle="collapse" data-parent="#accordion1">
                                 <p><b><span class="glyphicon glyphicon-plus text-success"></span>
@@ -599,6 +612,7 @@
 });
 
       </script>
+ 
    
   </body>
 </html>
