@@ -8,6 +8,13 @@
 <body>
   <script>
 
+function isEven(myinputarr){
+    for (var j = 0; j <myinputarr.length(); j++) {
+    if(myinputarr[i]%2==0){return 1;}
+    else{return 0;}
+    }
+}
+
     function myFunction(myinputarr) {
       var size = 3; // Array size
       var oddarr = [];
@@ -16,7 +23,7 @@
         myinputarr[i] = prompt('Enter array Element ' + i);
       }
 
-      console.log(myinputarr);
+      //console.log(myinputarr);
 
       for (var j = 0; j < size; j++) {
           if (myinputarr[j] % 2 != 0) {
@@ -24,10 +31,17 @@
         }
       }
       
-      console.log("odd elements are:");
-      for (let k = 0; k < oddarr.length; k++) {
-        console.log(oddarr[k]);
-      }
+    //   console.log("odd elements are:");
+    //   for (let k = 0; k < oddarr.length; k++) {
+    //     console.log(oddarr[k]);
+    //   }
+
+    //const arr = ['zero', 'one', 'two'];
+
+const obj1 = Object.assign(myinputarr, isEven());
+console.log(obj1); // 👉️ {0: 'zero', 1: 'one', 2: 'two'}
+
+
 
     }
 

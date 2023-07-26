@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+    <form>
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">enter the values</label> -->
+          <input name="array[]" value="" class="form-control" id="Input1" aria-describedby="emailHelp" placeholder="Enter element">
+          </div>
+        </form>
+
+    <p id="result"></p>    
+
+
+  <script>
+
+    function myFunction(myinputarr) {
+      var size = 3; // Array size
+      var oddarr = [];
+
+      var input = document.getElementsByName('array[]');
+
+      console.log(input);
+
+    //   for (var i = 0; i < size; i++) {
+    //     myinputarr[i] = prompt('Enter array Element ' + i);
+    //   }
+
+     // console.log(myinputarr);
+
+      for (var j = 0; j < input.length; j++) {
+          if (input[j] % 2 != 0) {
+          oddarr.push(input[j]);
+        }
+      }
+      
+      for (let k = 0; k < oddarr.length; k++) {
+        //console.log(oddarr[k]);
+      }
+
+    }
+
+    //variable array
+    var myinputar = [];
+
+
+    //calling a function
+    myFunction(myinputar);
+
+  </script>
+
+</body>
+
+</html>

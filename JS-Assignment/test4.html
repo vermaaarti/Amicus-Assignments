@@ -1,0 +1,52 @@
+<!-- Write a function which takes an array of integers as input and returns an array of objects.
+Each object will have 2 keys: Number: <The number itself>, IsEven: <Yes/No>.
+
+ Sample input: [1, 2].
+Sample Output: [{Number:1, IsEven:'No'}, {Number:2, IsEven:'Yes'}] -->
+
+<html>
+<head>
+
+</head>
+<body>
+<script>
+
+function generateObjects(arr) {
+  // Define an empty array to store the objects
+  let result = [];
+
+  // Iterate through the input array
+  for (let i = 0; i < arr.length; i++) {
+    let number = arr[i];
+    let isEven = arr[i] % 2 === 0 ? 'Yes' : 'No';
+
+    // Create the object with the required keys and values
+    let obj = {
+      Number: number,
+      IsEven: isEven
+    };
+
+    // Push the object into the result array
+    result.push(obj);
+  }
+
+  return result;
+}
+
+// Sample input
+let inputArray = [];
+let size = 3;
+for(var i=0; i<size; i++) {  
+    inputArray[i] = prompt('Enter array Element ' + i);
+}
+
+// Get the output
+let outputArray = generateObjects(inputArray);
+
+// Display the output
+console.log(outputArray);
+
+
+</script>
+</body>
+</html>
