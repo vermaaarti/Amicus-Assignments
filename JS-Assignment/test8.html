@@ -1,12 +1,35 @@
-<!-- Write a function which extracts the random numbers from control ids and retruns them as an array. -->
+<!-- Write a function which returns an array of ids all input text boxes having class form-control. -->
 <!DOCTYPE html>
 <head>
 
 </head>
 <body>
-<script>
 
+
+<form>
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">enter the values</label> -->
+      <input value="" class="form-control" id="Input1" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+      <input value="" class="form" id="Input2" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+      <input value="" class="form-control" id="Input3" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+      <input value="" class="form" id="Input4" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+      <input value="" class="form-control" id="Input5" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+        
+    </div>
+ </form>
+
+<script>
+  var arr = document.getElementsByClassName("form-control");  // selecting inputs
+   var ans = [];
+
+  for(let i = 0; i<arr.length;i++)
+    {   
+        ans.push(arr[i].id);   // pushing ids in ans arr
     
+     }
+
+  console.log(ans);
+ 
 </script>
 </body>
 </html>    

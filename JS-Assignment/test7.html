@@ -1,13 +1,40 @@
-<!-- Write a function with loops through all the controls in your HTML page and assigns an id to them.
-The id should be in the format: <randominteger_control>. Get random integer by callig the function declared above.
-Make sure all ids in the page are unique. -->
+<!-- Write a function which extracts the random numbers from control ids and retruns them as an array. -->
 <!DOCTYPE html>
 <head>
 
 </head>
 <body>
-<script>
+    <form>
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">enter the values</label> -->
+      <input value="" class="form-control" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+      <input value="" class="form" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+      <input value="" class="form-control" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+      <input value="" class="form" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+      <input value="" class="form-control" aria-describedby="emailHelp" placeholder="Enter element"><hr><br><br>
+        
+    </div>
+ </form>
 
+<script>
+    var arr = (document.getElementsByTagName("input"));  // selecting input field
+
+    var ans = [];  // new array
+    var idConArr = [];  // new array
+    for(let i = 0; i<arr.length;i++)
+    {    
+        var newVal = Math.floor(Math.random()*127942579745334)  
+         arr[i].id = ( newVal + "_control");  // id with _control
+          ans.push(arr[i].id);    // pushing in ans array
+   
+         idConArr.push(newVal);    // pushing in idconarr array
+       
+    }
+    console.log("id with '_control' are : ");
+    console.log(ans);
+    console.log("id without '_control' are : ");
+    console.log(idConArr);
+   
 </script>
     </body>
     </html>

@@ -1,0 +1,91 @@
+<!-- Write a function which returns count of radio buttons which have 'Yes' selected 
+    and the count of Radio Buttons which have 'No' selected -->
+
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <form>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios1" id="exampleRadios"
+                value="Yes">
+            <label class="form-check-label" for="exampleRadios1">
+                radio1
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios1" id="exampleRadios1"
+                value="No">
+            <label class="form-check-label" for="exampleRadios1">
+                radio2
+            </label>
+        </div>
+        <hr><br><br>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios3" id="exampleRadios2"
+                value="Yes">
+            <label class="form-check-label" for="exampleRadios1">
+                radio3
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios3" id="exampleRadios3"
+                value="No">
+            <label class="form-check-label" for="exampleRadios1">
+                radio4
+            </label>
+        </div>
+        <hr><br><br>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios2" id="exampleRadios4"
+                value="Yes" >
+            <label class="form-check-label" for="exampleRadios1">
+                radio5
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios2" id="exampleRadios5"
+                value="No" >
+            <label class="form-check-label" for="exampleRadios1">
+                radio6
+            </label>
+        </div>
+        <hr><br><br>
+        <!-- <button>Click Here!</button> -->
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button onclick="generateObjects(event)" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+    <script>
+
+
+        function generateObjects(event) {  // submit to stop refreshing the form
+            event.preventDefault();
+
+            var cntyes = 0;
+            var cntno = 0;
+            var noOfBtn = document.querySelectorAll("input[type='radio']");  // selecting input field
+            for (var i = 0; i < noOfBtn.length; i++) {   
+                // if(noOfBtn[i].type == 'radio') {  
+                if (noOfBtn[i].checked == true) {  //condition to check whether the button is checked or not
+                    if (noOfBtn[i].value == "Yes") { cntyes++; }  // condition to check if button yes button is checked
+                    else { cntno++; }  // else no button in checked
+                }
+
+            }
+            console.log("No. of Yes = " + cntyes);
+            console.log("No. of No = " + cntno);
+        }
+
+
+   // }  
+
+    </script>
+</body>
+
+</html>

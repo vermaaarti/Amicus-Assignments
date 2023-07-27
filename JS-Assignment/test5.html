@@ -1,29 +1,13 @@
-<!-- Write a function which takes an array of objects having 2 keys Task and Sequence and
- returns an array of integers having sequences.
- 
-Sample Input: [{Task: 'Task 1', Sequence: 1}, Task: 'Task 2', Sequence: 2]
-Sample Output: [1,2] -->
-
+<!-- Write a function which would return a random integer. -->
 <!DOCTYPE html>
 <head>
 
 </head>
 <body>
 <script>
-
-function getSequences(arr) {
-  // Extract the 'Sequence' values from each object and create a new array
-  const sequences = arr.map(obj => obj.Sequence);
-  return sequences;
-}
-
-   const sampleObj = [
-  { Task: 'Task 1', Sequence: 1 },
-  { Task: 'Task 2', Sequence: 2 }
-];
-
-const result = getSequences(sampleObj);
-console.log(result); // Output: [1, 2] 
- </script>
-    </body>
-    </html>
+   
+var value = parseInt(Math.random()*9007199254740991);
+console.log(value);
+</script>
+</body>
+</html>

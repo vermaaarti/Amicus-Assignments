@@ -1,18 +1,21 @@
+<!-- Write a function which takes an array of intergers as input and returns 'Yes' if the 
+  array has an even number and returns 'No' other wise. -->
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <script>
 
+  <script>
+// function to check whether any array element is even 
 function myFunction(myinputarr){
-    var size = 5; // Array size
+    var size = prompt('Enter no. of Elements '); //taking Array size
     for(var i=1; i<=size; i++) {  
-    myinputarr[i] = prompt('Enter array Element ' + i);
+    myinputarr[i] = prompt('Enter array Element ' + i);  // taking Array element
 }
-for(var i=1; i<=size; i++) {
-if(myinputarr[i]%2==0){console.log("Yes " + myinputarr[i] + " is even");}
+for(var i=1; i<=size; i++) {    // printing array
+if(myinputarr[i]%2==0){console.log("Yes, " + myinputarr[i] + " is even");}
 }
 }
  

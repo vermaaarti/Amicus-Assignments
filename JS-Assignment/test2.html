@@ -1,3 +1,5 @@
+<!-- Write a function which takes an array of intergers as input and returns an array of 
+integers which are odd numbers in the input array. -->
 <!DOCTYPE html>
 
 <head>
@@ -9,30 +11,29 @@
   <script>
 
     function myFunction(myinputarr) {
-      var size = 3; // Array size
+      var size = prompt('Enter no. of Elements '); // taking Array size
       var oddarr = [];
 
-      for (var i = 0; i < size; i++) {
+      for (var i = 0; i < size; i++) {   // taing array element
         myinputarr[i] = prompt('Enter array Element ' + i);
       }
 
       console.log(myinputarr);
 
-      for (var j = 0; j < size; j++) {
+      for (var j = 0; j < size; j++) {   // checking whether any element is odd
           if (myinputarr[j] % 2 != 0) {
           oddarr.push(myinputarr[j]);
         }
       }
       
-      console.log("odd elements are:");
-      for (let k = 0; k < oddarr.length; k++) {
+      console.log("odd elements are:");  
+      for (let k = 0; k < oddarr.length; k++) {   // putput odd element
         console.log(oddarr[k]);
       }
 
     }
 
-    //variable array
-    var myinputar = [];
+       var myinputar = [];
 
     //calling a function
     myFunction(myinputar);

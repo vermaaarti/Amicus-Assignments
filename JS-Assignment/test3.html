@@ -1,3 +1,5 @@
+<!-- Write a function which takes an array of integers as input and returns an array of objects.
+Each object will have 2 keys: Number: <The number itself>, IsEven: <Yes/No>. -->
 <!DOCTYPE html>
 
 <head>
@@ -8,47 +10,34 @@
 <body>
   <script>
 
-function isEven(myinputarr){
-    for (var j = 0; j <myinputarr.length(); j++) {
-    if(myinputarr[i]%2==0){return 1;}
-    else{return 0;}
-    }
-}
-
     function myFunction(myinputarr) {
-      var size = 3; // Array size
-      var oddarr = [];
-
+   
+      var size = prompt('Enter no. of Elements :');
+    
+  let newoddObj = {};
       for (var i = 0; i < size; i++) {
-        myinputarr[i] = prompt('Enter array Element ' + i);
+        myinputarr[i] = prompt('Enter array Element ' + (i+1));
       }
 
-      //console.log(myinputarr);
-
+      var arr = []
       for (var j = 0; j < size; j++) {
+        newoddObj={}
+        newoddObj.numbr= myinputarr[j];
           if (myinputarr[j] % 2 != 0) {
-          oddarr.push(myinputarr[j]);
-        }
+            newoddObj.isEven = "No";
+        }else{newoddObj.isEven = "Yes";}
+        arr.push(newoddObj)
       }
       
-    //   console.log("odd elements are:");
-    //   for (let k = 0; k < oddarr.length; k++) {
-    //     console.log(oddarr[k]);
-    //   }
-
-    //const arr = ['zero', 'one', 'two'];
-
-const obj1 = Object.assign(myinputarr, isEven());
-console.log(obj1); // 👉️ {0: 'zero', 1: 'one', 2: 'two'}
-
-
-
+      console.log(size);
+      console.log("object elements are:");
+      
+      console.log(arr);
+      
     }
 
-    //variable array
     var myinputar = [];
 
-    //calling a function
     myFunction(myinputar);
 
   </script>

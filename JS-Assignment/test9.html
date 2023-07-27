@@ -1,30 +1,78 @@
-<!-- Write a function which returns an array of ids all input text boxes having class form-control. -->
+<!--Write a function Loops through your html page and returns the count of controls. -->
 <!DOCTYPE html>
 <head>
 
 </head>
 <body>
-
-
-<form>
+    <form>
+       <hr><br><br>
         <div class="form-group">
-          <!-- <label for="exampleInputEmail1">enter the values</label> -->
-      <input value="" class="form-control" id="Input1" aria-describedby="emailHelp" placeholder="Enter element">
-      <input value="" class="form" id="Input1" aria-describedby="emailHelp" placeholder="Enter element">
-      <input value="" class="form-control" id="Input1" aria-describedby="emailHelp" placeholder="Enter element">
-      <input value="" class="form" id="Input1" aria-describedby="emailHelp" placeholder="Enter element">
-      <input value="" class="form-control" id="Input1" aria-describedby="emailHelp" placeholder="Enter element">
-        
-    </div>
- </form>
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+           </div><hr><br><br>
+           <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select-1</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select-2</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              
+            </select>
+          </div>
+          <hr><br><br>
 
-<script>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div><hr><br><br>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              checkbox1
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              checkbox2
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              checkbox3
+            </label>
+          </div>
+          <hr><br><br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+            <label class="form-check-label" for="exampleRadios1">
+             radio1
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+            <label class="form-check-label" for="exampleRadios1">
+             radio2
+            </label>
+          </div> 
 
-var classes = document.getElementsByClassName("form-control");
-//var ids = 
+      </form>
 
-console.log(classes);
-
-</script>
-</body>
-</html>    
+      <script>
+        var arr = document.getElementsByTagName("input");   // selecting inputs
+   
+        console.log("Counts of inputs are: ")
+        console.log(arr.length);
+       
+      </script>
+ </body>
+ </html>   
