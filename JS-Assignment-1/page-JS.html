@@ -1,0 +1,385 @@
+<!-- Write a function which takes an array of intergers as input and returns 'Yes' if the 
+  array has an even number and returns 'No' other wise. -->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <hr><br><br>
+    <!-- program-1 -->
+    <p>Write a function which takes an array of intergers as input and returns 'Yes' if the
+        array has an even number and returns 'No' other wise.</p>
+    <form id="Q1" onsubmit="Program1(event)">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Enter Array Elements</label>
+            <input type="text" class="form-control" id="Q1-input">
+            <button type="submit" onclick="program1(event)" type="button" class="btn btn-outline-primary">Get
+                Ans</button>
+        </div>
+    </form>
+    <p id="demo"></p>
+    <hr><br><br>
+
+    <!-- program-2  -->
+    <p>Write a function which takes an array of intergers as input and returns an array of
+        integers which are odd numbers in the input array.</p>
+    <form id="Q2" onsubmit="Program2(event)">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Enter Array Elements</label>
+            <input type="" class="form-control" id="Q2-input" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <button onclick="program2(event)" type="submit" class="btn btn-outline-primary">Get
+                Ans</button>
+        </div>
+    </form>
+    <p id="demo2"></p>
+    <hr><br><br>
+
+    <!-- program-3 -->
+    <p>Write a function which takes an array of integers as input and returns an array of objects.
+        Each object will have 2 keys: Number: <The number itself>, IsEven: <Yes /No>.</p>
+    <form onsubmit="Program1(event)">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Enter Array Elements</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <button onclick="generateAns(event)" type="submit" type="button" class="btn btn-outline-primary">Get
+                Ans</button>
+        </div>
+    </form>
+
+    <!-- program-4  -->
+    <p>Write a function which takes an array of objects having 2 keys Task and Sequence and
+        returns an array of integers having sequences.</p>
+    <form onsubmit="Program1(event)">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Enter Array Elements</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <button onclick="generateAns(event)" type="submit" type="button" class="btn btn-outline-primary">Get
+                Ans</button>
+        </div>
+    </form>
+
+    <!-- program-5  -->
+    <p>Write a function which would return a random integer.</p>
+    <form onsubmit="Program1(event)">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Enter Array Elements</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <button onclick="generateAns(event)" type="submit" type="button" class="btn btn-outline-primary">Get
+                Ans</button>
+        </div>
+    </form>
+
+    <!-- program-6 -->
+    <p>Write a function with loops through all the controls in your HTML page and assigns an id to them.
+        The id should be in the format: <randominteger_control>. Get random integer by callig the function
+            declared above.
+            Make sure all ids in the page are unique.</p>
+    <form>
+        <div class="form-group">
+            <!-- <label for="exampleInputEmail1">enter the values</label> -->
+            <input value="" class="form-control" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form-control" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form-control" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+
+        </div>
+    </form>
+
+    <!-- program-7 -->
+    <p>Write a function which extracts the random numbers from control ids and retruns them as an array.</p>
+    <form>
+        <div class="form-group">
+            <!-- <label for="exampleInputEmail1">enter the values</label> -->
+            <input value="" class="form-control" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form-control" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form-control" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+
+        </div>
+    </form>
+
+    <!-- program-8 -->
+    <p>Write a function which returns an array of ids all input text boxes having class form-control.</p>
+    <form>
+        <div class="form-group">
+            <!-- <label for="exampleInputEmail1">enter the values</label> -->
+            <input value="" class="form-control" id="Input1" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form" id="Input2" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form-control" id="Input3" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form" id="Input4" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+            <input value="" class="form-control" id="Input5" aria-describedby="emailHelp" placeholder="Enter element">
+            <hr><br><br>
+
+        </div>
+    </form>
+
+    <!-- program-9 -->
+    <p>Write a function Loops through your html page and returns the count of controls.</p>
+    <form>
+        <hr><br><br>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+        </div>
+        <hr><br><br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select-1</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select-2</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+
+            </select>
+        </div>
+        <hr><br><br>
+
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <hr><br><br>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                checkbox1
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                checkbox2
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+                checkbox3
+            </label>
+        </div>
+        <hr><br><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+            <label class="form-check-label" for="exampleRadios1">
+                radio1
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+            <label class="form-check-label" for="exampleRadios1">
+                radio2
+            </label>
+        </div>
+
+    </form>
+
+    <!-- program-10 -->
+    <p>Write a function which returns count of radio buttons which have 'Yes' selected
+        and the count of Radio Buttons which have 'No' selected</p>
+    <form>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios1" id="exampleRadios"
+                value="Yes">
+            <label class="form-check-label" for="exampleRadios1">
+                radio1
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios1" id="exampleRadios1"
+                value="No">
+            <label class="form-check-label" for="exampleRadios1">
+                radio2
+            </label>
+        </div>
+        <hr><br><br>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios3" id="exampleRadios2"
+                value="Yes">
+            <label class="form-check-label" for="exampleRadios1">
+                radio3
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios3" id="exampleRadios3"
+                value="No">
+            <label class="form-check-label" for="exampleRadios1">
+                radio4
+            </label>
+        </div>
+        <hr><br><br>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios2" id="exampleRadios4"
+                value="Yes">
+            <label class="form-check-label" for="exampleRadios1">
+                radio5
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input exampleRadio" type="radio" name="exampleRadios2" id="exampleRadios5"
+                value="No">
+            <label class="form-check-label" for="exampleRadios1">
+                radio6
+            </label>
+        </div>
+        <hr><br><br>
+        <!-- <button>Click Here!</button> -->
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button onclick="generateObjects(event)" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- program-11 -->
+    <p>Write a function which returns id and value of all the controls in your HTML page as
+        array of objects.</p>
+    <form>
+        <hr><br><br>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+        </div>
+        <hr><br><br>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select-1</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <hr><br><br>
+
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <hr><br><br>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="option1" id="Check1">
+            <label class="form-check-label" for="defaultCheck1">
+                checkbox1
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="option2" id="Check2">
+            <label class="form-check-label" for="defaultCheck1">
+                checkbox2
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="option3" id="Check3">
+            <label class="form-check-label" for="defaultCheck1">
+                checkbox3
+            </label>
+        </div>
+        <hr><br><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+            <label class="form-check-label" for="exampleRadios1">
+                radio1
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option2">
+            <label class="form-check-label" for="exampleRadios1">
+                radio2
+            </label>
+        </div>
+        <hr><br><br>
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button onclick="generateObjects(event)" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+     
+        // program-1
+        function program1(event) {
+            event.preventDefault();
+            var myinputarr = document.getElementById("Q1");  // taking Array element
+            // console.log(myinputarr);
+            // console.log(myinputarr[0].value);
+            var valuesOfInput = myinputarr[0].value.split(",");
+            // console.log(valuesOfInput);
+            for (var i = 0; i < valuesOfInput.length; i++) {
+                if (valuesOfInput[i] % 2 === 0) {
+                    document.getElementById("demo").innerHTML = ("Yes");
+                }
+            }
+            document.getElementById("demo").innerHTML = ("All the elements are odd");
+        }
+
+        //  program-2
+        function program2(event) {
+            event.preventDefault();
+            var myinputarr = document.getElementById("Q2");
+            var oddarr = [];  // taking Array element
+            // console.log(myinputarr);
+            // console.log(myinputarr[0].value);
+            var valuesOfInput2 = myinputarr[0].value.split(",");
+            // console.log(valuesOfInput);
+            for (var i = 0; i < valuesOfInput2.length; i++) {
+                if (valuesOfInput2[i] % 2 != 0) {
+          oddarr.push(myinputarr[i]);
+        }
+            }
+            document.getElementById("demo2").innerHTML = ("Odd elements are ");
+            for (let k = 0; k < oddarr.length; k++) {   // putput odd element
+        document.write(oddarr[k]);
+        }
+    }
+
+
+
+
+    //   for (var j = 0; j < size; j++) {   // checking whether any element is odd
+    //       if (myinputarr[j] % 2 != 0) {
+    //       oddarr.push(myinputarr[j]);
+    //     }
+    //   }
+      
+    //   console.log("odd elements are:");  
+    //   for (let k = 0; k < oddarr.length; k++) {   // putput odd element
+    //     console.log(oddarr[k]);
+    //     }
+
+
+    </script>
+</body>
+</html>
