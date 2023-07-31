@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+<div class="col-lg-4 col-md-6 col-sm-10 ">
+
+    <label for="input-text5" class="form-labelfw-semibold required-labelfs-6">Country</label>
+
+    <select  class="form-select" style="font-size: small;" id="country-dd" onchange="A2Program5(event)" aria-label="Default select example">
+
+      <option value="0">Open this select menu</option>
+
+      <option value="IN">India</option>
+
+      <option value="USA">United States</option>
+
+    </select>
+
+  </div>
+
+  <div class="col-lg-4 col-md-6 col-sm-10 ">
+
+    <label for="input-text5" class="form-labelfw-semibold required-labelfs-6">State</label>
+
+
+    <select  class="form-select" style="font-size: small;" id="state-dd" aria-label="Default select example">
+
+      <option value="0">Open this select menu</option>
+
+    </select>
+  </div>
+  <script>
+    function A2Program5(event) {
+
+event.preventDefault();
+
+
+
+const countrydata={"IN":{
+    "AP":"Andhra Pradesh",
+    "ARP":"Arunachal Pradesh",
+    "ASM":"Assam",
+    "TRI":"Tripura",
+},
+
+"USA":
+{"AL":"Alabama","AK":"Alaska","AZ":"Arizona","CA":"California","GA":"Georgia",
+"MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi",
+"MO":"Missouri","WI":"Wisconsin","WY":"Wyoming"}
+
+}
+const state=countrydata[event.target.value];
+
+const countryData=Object.keys(state);
+
+let stateHtmml="";
+
+countryData.map((item)=>{
+
+      stateHtmml+=`<option value=${item}> ${state[item]}</option>`
+
+})
+document.getElementById("state-dd").innerHTML=stateHtmml;
+
+}
+  </script>
+  </body>
+  </html>

@@ -75,7 +75,7 @@
        <div class="col-lg-4 col-md-6 col-sm-12 mt-4"> 
     <label for="validationCustom01" class="form-label"><b>Company<sub class="text-danger fs-6"><b>*</b></sub></b></label>
     <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-  <option class="">1020 - International</option>
+  <option value="0">select value</option>
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
@@ -84,7 +84,7 @@
 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
 <label for="validationCustom01" class="form-label"><b>Cost Center<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-<option>5020 - IT Mgmt & Admin-1020</option>
+<option value="0">select value</option>
 <option value="1">One</option>
 <option value="2">Two</option>
 <option value="3">Three</option>
@@ -94,7 +94,7 @@
 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
 <label for="validationCustom01" class="form-label"><b>Employee Group<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-<option>Non-Buckman</option>
+<option value="0">select value</option>
 <option value="1">One</option>
 <option value="2">Two</option>
 <option value="3">Three</option>
@@ -106,7 +106,7 @@
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4"> 
     <label for="validationCustom01" class="form-label"><b>Manager Name<sub class="text-danger fs-6"><b>*</b></sub></b></label>
     <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-  <option>10011710 - Ayobamidele Olaniyi</option>
+  <option value="0">select value</option>
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
@@ -115,7 +115,7 @@
 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">  
 <label for="validationCustom01" class="form-label"><b>HR Functional Area<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-<option>Information Technologies</option>
+<option value="0">select value</option>
 <option value="1">One</option>
 <option value="2">Two</option>
 <option value="3">Three</option>
@@ -125,7 +125,7 @@
 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
 <label for="validationCustom01" class="form-label"><b>Employee Subgroup</b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-<option>Temporary / Seasonal</option>
+<option value="0">select value</option>
 <option value="1">One</option>
 <option value="2">Two</option>
 <option value="3">Three</option>
@@ -136,7 +136,7 @@
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
          <label for="validationCustom01" class="form-label"><b>Manager Company</b></label>
     <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-  <option>1020 - International</option>
+  <option value="0">select</option>
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
@@ -146,7 +146,7 @@
 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
 <label for="validationCustom01" class="form-label"><b>Industry/BU<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-<option>Informational Technologies</option>
+<option value="0">select value</option>
 <option value="1">One</option>
 <option value="2">Two</option>
 <option value="3">Three</option>
@@ -156,7 +156,7 @@
 <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
   <label for="validationCustom01" class="form-label"><b>Subarea<sub class="text-danger fs-6"><b>*</b></sub></b></label>
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-<option>3000 - IT</option>
+<option value="0">select value</option>
 <option value="1">One</option>
 <option value="2">Two</option>
 <option value="3">Three</option>
@@ -231,6 +231,7 @@
           <label class="form-check-label mt-sm-4 mt-md-5 mt-lg-2 mb-2"><b>Std. BL Vacation Policy Comment</b></label>
           <textarea class="form-control" aria-label="With textarea"></textarea>
         </div>
+        <p id="demo"></p>
         <div class="form-group row">
             <div class="col-sm-10">
               <button onclick="FormValidate(event)" type="submit" class="btn mt-4 btn-primary">Submit</button>
@@ -249,19 +250,51 @@
 
   function FormValidate(event){
     event.preventDefault(); 
-
-    var val=document.getElementsByTagName('input');
-   var array=[];
-  
-   for(var i=0; i<val.length; i++){
-    array.push(val);
-   
-//console.log(array.size);
-    if(array[i].value == ""){
-       // alert('Please Enter First Name');
-        val[i].style.backgroundColor = "red";
-        return false;
+       check = true;
+    //for input areas
+    var val=document.querySelectorAll('input[type="text"]');
+     for(var i=0; i<val.length; i++){
+    if(val[i].value == ""){
+        val[i].style.borderColor = "red";
+        check=false;
     }
+  }
+
+      //for radio buttons
+    var valrad=document.querySelectorAll('input[type="radio"]');
+  
+    for(var i=0; i<valrad.length; i++){
+    if(valrad[i].checked == false ){
+      const btn = document.querySelectorAll("[name=" + valrad[i].name + "]");
+      if(btn[0].checked== false && btn[1].checked==false){
+      valrad[i].style.borderColor = "red"; check=false;}
+    }    
+ }
+    //  for(var i=0; i<valrad.length; i++){
+    //   //var numl = valead[i].querySelectorAll('[name]');
+    // if(valrad[i].checked == ""){
+    //     valrad[i].style.borderColor = "red";
+    // }    
+    // }
+ //for text area
+ var valarea=document.getElementsByTagName('textarea');
+     for(var i=0; i<valarea.length; i++){
+    if(valarea[i].value == ""){
+        valarea[i].style.borderColor = "red";
+    }    check=false;
+ }
+
+//for select areas
+var valsel=document.querySelectorAll('select');
+     for(var i=0; i<valsel.length; i++){
+    if(valsel[i].value === "0"){valsel[i].style.borderColor = "red";  check=false;}
+ }
+
+// if(querySelectorAll('input').value != ""){
+//   document.getElementById("demo").innerHTML = "Validation Successful";
+// }
+if(check == true){
+  alert("Validation Successful");
 }
 }
 

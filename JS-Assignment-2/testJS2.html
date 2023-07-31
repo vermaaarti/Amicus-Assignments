@@ -23,7 +23,7 @@
     
             <p class="form-label text-secondary" style="font-size:small;"> First Name</p>
     
-            <select class="form-select" style="font-size: small;" id="input-text" aria-label="Default select example">
+            <select class="form-select" style="font-size: small;" id="input-text1" aria-label="Default select example">
     
               <option selected>Open this select menu</option>
     
@@ -45,7 +45,7 @@
     
             <p class="form-label text-secondary" style="font-size:small;"> First Name</p>
     
-            <select class="form-select" style="font-size: small;" id="input-text" aria-label="Default select example">
+            <select class="form-select" style="font-size: small;" id="input-text2" aria-label="Default select example">
     
               <option selected>Open this select menu</option>
     
@@ -65,7 +65,7 @@
     
             <p class="form-label text-secondary" style="font-size:small;"> First Name</p>
     
-            <select class="form-select" style="font-size: small;" id="input-text" aria-label="Default select example">
+            <select class="form-select" style="font-size: small;" id="input-text3" aria-label="Default select example">
     
               <option selected>Open this select menu</option>
     
@@ -87,7 +87,7 @@
     
             <p class="form-label text-secondary" style="font-size:small;"> First Name</p>
     
-            <select class="form-select" style="font-size: small;" id="input-text" aria-label="Default select example">
+            <select class="form-select" style="font-size: small;" id="input-text4" aria-label="Default select example">
     
               <option selected>Open this select menu</option>
     
@@ -107,7 +107,7 @@
     
             <p class="form-label text-secondary" style="font-size:small;"> First Name</p>
     
-            <select class="form-select" style="font-size: small;" id="input-text" aria-label="Default select example">
+            <select class="form-select" style="font-size: small;" id="input-text5" aria-label="Default select example">
     
               <option selected>Open this select menu</option>
     
@@ -129,7 +129,7 @@
     
             <p class="form-label text-secondary" style="font-size:small;"> First Name</p>
     
-            <select class="form-select" style="font-size: small;" id="input-text" aria-label="Default select example">
+            <select class="form-select" style="font-size: small;" id="input-text6" aria-label="Default select example">
     
               <option selected>Open this select menu</option>
     
@@ -149,7 +149,7 @@
     
             <p class="form-label text-secondary" style="font-size:small;"> First Name</p>
     
-            <select class="form-select" style="font-size: small;" id="input-text" aria-label="Default select example">
+            <select class="form-select" style="font-size: small;" id="input-text7" aria-label="Default select example">
     
               <option selected>Open this select menu</option>
     
@@ -171,7 +171,7 @@
     
             <p class="form-label text-secondary" style="font-size:small;"> First Name</p>
     
-            <select class="form-select" style="font-size: small;" id="input-text" aria-label="Default select example">
+            <select class="form-select" style="font-size: small;" id="input-text8" aria-label="Default select example">
     
               <option selected>Open this select menu</option>
     
@@ -191,9 +191,9 @@
     
             <p class="form-label text-secondary" style="font-size:small;"> First Name</p>
     
-            <select class="form-select" style="font-size: small;" id="input-text" aria-label="Default select example">
+            <select class="form-select" style="font-size: small;" id="input-text9" aria-label="Default select example">
     
-              <option selected>Open this select menu</option>
+              <option >Open this select menu</option>
     
               <option value="1">One</option>
     
@@ -216,27 +216,27 @@ function myFunction(event) {
 
   var arr = [];
 
-    //newObj={}
+   
     var labl =  document.getElementsByTagName("label");
-    //var value = document.getElementsByTagName("label");
-   // document.getElementsByTagName("select");
- for(var i=0; i<labl.length; i++){
+    
+   for(var i=0; i<labl.length; i++){
+
   var newObj = {};
+
   newObj[labl[i].textContent]= labl[i].textContent;
+
   let text = labl[i].getAttribute('for');
-  console.log(text);
+  //console.log(text);
+  var controlType = document.getElementById(text).type;
+ 
+    newObj[labl[i].textContent]= controlType ;
+
   arr.push(newObj);
+
+  
  }
-    arr.push(newObj)
-  //}
   document.getElementById("demo").innerHTML = JSON.stringify(arr);
 
-///////////////////// 
-// var value = document.getElementsById("labl[for]");
-
-// var z = document.getElementById(text);
-///////////////////////////////
-// console.log(z);
 }
 
 </script>
