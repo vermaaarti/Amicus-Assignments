@@ -6,7 +6,7 @@ namespace assig_2.Services;
     {
 
         static List<Employ> Employs { get; }
-    static int nextId = 3;
+    static int nextId = 4;
     static EmployDetail()
         {
             Employs = new List<Employ>
