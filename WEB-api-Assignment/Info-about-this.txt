@@ -1,0 +1,4 @@
+ass1-----------------------------------   Assignment-1
+assignment2----------------------------   Assignment-2
+AssignmentAPI--------------------------   Combined Assignment if 1 and 2 ------ where we have to merge 
+only the controller, model and services.
