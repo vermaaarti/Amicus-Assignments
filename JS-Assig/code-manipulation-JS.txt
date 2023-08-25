@@ -1,0 +1,21 @@
+1. Correction of names   .required-field
+label ---------------------------------------------------------------------  done
+
+2. Form id =>-------------------------------------------------------------- done
+
+ fields :
+
+ clicking of a submit -> perform actions
+
+3. Create a serparate js--------------------------------------------------done
+4.$(`.required field).each( ----------------------------------------------done
+
+
+
+
+-----------------------
+
+
+JQuery Datatable : array :
+
+add table data through datatable inbuilt methods 
