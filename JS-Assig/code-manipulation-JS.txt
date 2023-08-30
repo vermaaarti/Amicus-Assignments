@@ -1,3 +1,25 @@
+=-------------------------------------------Day-1---------------------------------------------------------------
+
+1. ID
+2. Name
+3. Department
+4. Shift : select ( 
+
+submit 
+
+{id : ValId, name : Valname, Dept : valDept, Shift : valShift} 
+
+global array  [
+
+{id : ValId, name : Valname, Dept : valDept, Shift : valShift}, 
+
+{id : ValId, name : Valname, Dept : valDept, Shift : valShift}
+   ]
+
+
+
+
+
 1. Correction of names   .required-field
 label ---------------------------------------------------------------------  done
 
@@ -13,9 +35,41 @@ label ---------------------------------------------------------------------  don
 
 
 
------------------------
-
-
+-------- --------------Topics to study-----------------------------------------------------
 JQuery Datatable : array :
 
 add table data through datatable inbuilt methods 
+
+
+
+
+
+
+
+----------------------------------------------Day-2---------------------------------------------------------
+1. JQuey datatable 
+
+2. Find out jquery datatble methods, which takes an array of objects to fill the table 
+   a) JQuey datatabe also provides us a method to clear the existing table
+   b) Without removing the existing records.
+ 
+3. How to add an object directly.
+
+----------------------------------------Day-3------------------------------------------------------------
+
+
+
+col1 col2 col3    [{col1 : val, col2 : val, col3 : val}, {col1 : val, col2 : val, col3 : val}]
+
+ 
+Datatable => how to do column maping in jquery using an object array
+
+
+
+
+
+
+
+
+
+
