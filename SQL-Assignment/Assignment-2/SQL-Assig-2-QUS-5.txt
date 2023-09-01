@@ -1,0 +1,31 @@
+
+CREATE Table Person_aarti(
+FirstName varchar(255),
+MiddleName varchar(255),
+LastName varchar(255),
+);  
+
+ 
+
+INSERT INTO Person_aarti(FirstName, MiddleName,LastName)
+VALUES
+('Ken','J','Sanchez'), 
+('Terri','Lee','Duffy'),
+('Roberto',null,'Tamburello'),
+('Rob',null,'Walters'),
+('Gail','A','Erickson'),
+('Jossef','H','Goldberg'),
+('Dylan','A','Miller'), 
+('Diane','L','Margheim'),
+('Gig','J','Matthew'),
+('Michael',null,'Raheem')
+
+
+
+CREATE PROCEDURE FullName_aarti  @Firstname varchar(255)
+AS
+BEGIN
+SELECT LastName FROM Person_aarti WHERE FirstName = @Firstname
+END;
+
+execute fullname terri

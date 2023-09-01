@@ -1,0 +1,29 @@
+use --->  find()
+
+
+perform ----------------------------------------------------------------------------------------------------------------------
+
+1)fill the data in the form and check if any data exist(has been filled) already
+
+validation(function) => returns true/false
+
+2)data(input field) should be null after submit clicked
+
+var validationResult = validation ()
+
+if(true){
+perform action
+}
+else{
+data exist already
+}
+
+
+
+--------------
+
+
+function validation(){
+
+retun true/false
+}

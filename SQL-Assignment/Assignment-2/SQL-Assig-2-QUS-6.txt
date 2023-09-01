@@ -1,0 +1,55 @@
+
+
+CREATE TABLE country_aarti (
+    id INT PRIMARY KEY,
+    country_name CHAR(128),
+    country_name_eng CHAR(128),
+    country_code CHAR(8)
+	);
+
+ 
+
+INSERT INTO country_aarti (id, country_name, country_name_eng, country_code)
+VALUES
+    (1, 'United States', 'United States', 'US'),
+    (2, 'Canada', 'Canada', 'CA'),
+    (3, 'United Kingdom', 'United Kingdom', 'UK'),
+    (4, 'Australia', 'Australia', 'AU'),
+    (5, 'Germany', 'Germany', 'DE'),
+    (6, 'France', 'France', 'FR');
+	
+ 
+
+ 
+
+ 
+
+CREATE TABLE city_aarti( 
+
+id INT PRIMARY KEY,
+city_name CHAR(128),
+lat decimal(9,6),
+long decimal(9,6),
+country_id int,
+FOREIGN KEY (country_id) REFERENCES country_aarti(id)
+
+);  
+
+ 
+
+INSERT INTO city_aarti (id, city_name, lat, long, country_id)
+VALUES
+    (1, 'City A', 40.7128, -74.0060, 1),
+    (2, 'City B', 34.0522, -118.2437, 2),
+    (3, 'City C', 51.5074, -0.1278, 3),
+    (4, 'City D', -33.8688, 151.2093, 4),
+    (5, 'City E', 52.5200, 13.4050, 5),
+    (6, 'City F', -22.9083, -43.1964, 6);
+
+ 
+
+ 
+
+SELECT city_aarti.id as City_id, city_name, country_name, country_name_eng, country_code FROM city_aarti
+INNER JOIN country_aarti
+ON city_aarti.country_id = country_aarti.id WHERE country_id IN (1,4,5);
