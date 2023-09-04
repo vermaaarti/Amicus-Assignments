@@ -17,14 +17,68 @@ $(document).ready(function() {
   $("#submitButton").click(function(event) {
     event.preventDefault();
 
+    var newId;
+
     var formDataObject = {};
+   // var newArrayofId = [];
     $("#myForm .dataToAdd").each(function() {
       var header = $(this).attr("name");
       formDataObject[header] = $(this).val();
-    });
 
+      // var newId = formDataObject.id;
+     
+       // newArrayofId.push(newId);
+
+      //   console.log(newId);
+      //  console.log( jQuery.type(newId));
+
+
+    //  if(globalArray.filter(item.id === newId)){alert("id alrady exist");}
+    });
+   
+    function notExist(formDataObject){
+     // var value = newArrayofId.find(item => item.id==newId);
+    //  for(var i=0; i<newArrayofId.length; i++){
+    //   if(newArrayofId[i] == newId)
+    //  }
+    // if(value){
+    //    return false;
+    // }
+    // else return true;
+    if(globalArray.find(item=>parseInt(item.id)!==parseInt(formDataObject.id))){
+     return false;}
+   else {alert("repeted data");
+   
+   return true; }
+  }
+   // .has()
+
+if(globalArray.length == 0 || (notExist(formDataObject)===false)){
+      //newId = formDataObject.id;
+         //  if(newId.filter(item => formDataObject.id == newId)){alert("id alrady exist");} 
+        // if(newId.length > 1){var  data = newId.find(items => items.id === newId[0]);}
     globalArray.push(formDataObject);
+
+   }
+ // });
+     
+//  function notExist(formDataObject){
+//    // if(newId.find(item => item.id != newId)) return true;
+//    if(formDataObject.id != newId.find(item=>item.id)) return true;
+//     else return false;
+//    }
+
+//console.log(newId);  
     console.log(formDataObject);
+    console.log(globalArray);
+    //console.log(newArrayofId);
+
+    //checking if id already exist or not
+    //  var newId = formDataObject.id;
+
+    //  if(globalArray.filter(item.id === newId)){
+    //    aleart("item already exist");
+    //  }
 
     // Clear the DataTable
     dataTable.clear();
@@ -50,6 +104,16 @@ $(document).ready(function() {
 
     var filteredDepartment = globalArray.filter(item => item.department === inputData)
    
+//checking if id already exist or not
+    // var newId = item.id;
+    // if(filteredDepartment.filter(item.id === newId)){
+    //   aleart("item already exist");
+    // } 
+    // else{
+
+    // }
+
+
 
    console.log(filteredDepartment);
 
@@ -68,6 +132,9 @@ $(document).ready(function() {
     }
 
   });
+
+
+ 
 
 });
 
