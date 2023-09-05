@@ -7,7 +7,7 @@ perform ------------------------------------------------------------------------
 
 validation(function) => returns true/false
 
-2)data(input field) should be null after submit clicked
+2)data(input field) should be null after submit clicked--------------------------------------------------------------------- done
 
 var validationResult = validation ()
 
