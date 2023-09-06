@@ -4,7 +4,7 @@
 
  
 
-CREATE TABLE Customers_aarti (
+/*CREATE TABLE Customers_aarti (
 
     CustomerID INT ,
 
@@ -20,7 +20,7 @@ CREATE TABLE Customers_aarti (
 
     Country VARCHAR(255)
 
-);
+); */
 
  
 
@@ -28,7 +28,7 @@ CREATE TABLE Customers_aarti (
 
  
 
-INSERT INTO Customers_aarti(CustomerID, CustomerName, ContactName, AddressDetails, City, PostalCode, Country)
+/*INSERT INTO Customers_aarti(CustomerID, CustomerName, ContactName, AddressDetails, City, PostalCode, Country)
 
 VALUES
 
@@ -62,7 +62,7 @@ VALUES
  (10,'Bottom Dollar', 'Elizabeth Lincoln', '23 Tsawassen Blvd.', 'Tsawassen', 'T2F 8M4', 'Canada'),
 
  
- (11,'B s Beverages', 'Victoria Ashworth', 'Fauntleroy Circus', 'London', 'EC2 5NT', 'UK');
+ (11,'B s Beverages', 'Victoria Ashworth', 'Fauntleroy Circus', 'London', 'EC2 5NT', 'UK');*/
 
  
 
@@ -71,7 +71,7 @@ VALUES
 /*-- 3. SQL statement for selecting the "CustomerName" and "City" columns from the "Customers_aarti" table*/
 
  
-SELECT CustomerName, City FROM Customers_aarti;
+/*SELECT CustomerName, City FROM Customers_aarti;*/
 
  
 
@@ -79,11 +79,11 @@ SELECT CustomerName, City FROM Customers_aarti;
 
 /*--  4. SQL Query to create a PRIMARY KEY constraint first we add not null constraint and then we make CustomerID primary Key*/
 
- ALTER TABLE Customers_aarti ALTER COLUMN CustomerID INT NOT NULL;
+ /*ALTER TABLE Customers_aarti ALTER COLUMN CustomerID INT NOT NULL;
  
    /* execute one by one */
 
-ALTER TABLE Customers_aarti ADD PRIMARY KEY (CustomerID);
+ALTER TABLE Customers_aarti ADD PRIMARY KEY (CustomerID);*/
 
  
 
@@ -91,7 +91,7 @@ ALTER TABLE Customers_aarti ADD PRIMARY KEY (CustomerID);
 
 /*-- 5. SQL statement to selects only the DISTINCT values from the "Country" column in the "Customers" table*/
 
- SELECT DISTINCT Country FROM Customers_aarti;
+ /*SELECT DISTINCT Country FROM Customers_aarti;*/
 
  
 
@@ -99,21 +99,21 @@ ALTER TABLE Customers_aarti ADD PRIMARY KEY (CustomerID);
 
 /*-- 6. SQL statement selects all the customers from the country "Mexico" from "Customers_aarti" table  */
 
-SELECT * FROM Customers_aarti WHERE Country = 'Mexico';
+/*SELECT * FROM Customers_aarti WHERE Country = 'Mexico';*/
 
  
 
 /*-- 7. selects all customers from the "Customers_aarti" table, sorted by the "Country" column */
  
 
- SELECT * FROM Customers_aarti ORDER BY Country; 
+ /*SELECT * FROM Customers_aarti ORDER BY Country; */
 
  
 
 /*-- 8. SQL statement that selects all fields from Customers where Country is "Germany" AND City is "Berlin" AND PostalCode is higher than 12000 */
   
 
-SELECT * FROM Customers_aarti WHERE Country = 'Germany' AND City = 'Berlin' AND PostalCode > 12000; 
+/*SELECT * FROM Customers_aarti WHERE Country = 'Germany' AND City = 'Berlin' AND PostalCode > 12000; */
 
  
 
@@ -122,7 +122,7 @@ SELECT * FROM Customers_aarti WHERE Country = 'Germany' AND City = 'Berlin' AND 
 /*-- 9. SQL statement that selects all fields from Customers where either City is "Berlin"or CustomerName starts with the letter "G" or Country is "Norway" */
  
 
-SELECT * FROM Customers_aarti WHERE City = 'Berlin' OR CustomerName LIKE 'G%' OR Country='Norway';
+/*SELECT * FROM Customers_aarti WHERE City = 'Berlin' OR CustomerName LIKE 'G%' OR Country='Norway';*/
 
  
 
@@ -130,7 +130,7 @@ SELECT * FROM Customers_aarti WHERE City = 'Berlin' OR CustomerName LIKE 'G%' OR
 
 /*-- 10.SQL statement that Select all customers that either are from Spain or starts with either "G" or "R" */
 
- SELECT * FROM Customers_aarti WHERE Country='Spain' or Country LIKE '[GR]%';
+ /*SELECT * FROM Customers_aarti WHERE Country='Spain' or Country LIKE '[GR]%';*/
 
  
 

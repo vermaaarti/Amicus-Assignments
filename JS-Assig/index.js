@@ -1,6 +1,8 @@
+
 var globalArray = [];
 
 $(document).ready(function() {
+
   var dataTable = $('#dataTable').DataTable({
     columns: [
       { data: 'id', title: 'Id' },
@@ -17,27 +19,13 @@ $(document).ready(function() {
   $("#submitButton").click(function(event) {
     event.preventDefault();
 
-    var newId;
-
     var formDataObject = {};
-   // var newArrayofId = [];
+
     $("#myForm .dataToAdd").each(function() {
       var header = $(this).attr("name");
       formDataObject[header] = $(this).val();
 
-
-
-      
-      // var newId = formDataObject.id;
-     
-       // newArrayofId.push(newId);
-
-      //   console.log(newId);
-      //  console.log( jQuery.type(newId));
-
-
-    //  if(globalArray.filter(item.id === newId)){alert("id alrady exist");}
-    });
+   });
    
     function idExist(formDataObject){
     
@@ -47,12 +35,23 @@ $(document).ready(function() {
  }
    // .has()
 
-if(globalArray.length == 0 || (idExist(formDataObject)===false)){
-    globalArray.push(formDataObject);
-   }
+// if(anyBlankField(formDataObject)==true){ alert("some data fields are blank"); }
+// else{
+
+
+   if(anyBlankField(formDataObject) == true){
+    if(globalArray.length == 0 || (idExist(formDataObject)===false)){
+      globalArray.push(formDataObject);
+     }
+    }
+  //   else {
+  //     alert("some data fields are blank"); 
+  // }
+
+//});
+ // }
   
-    console.log(formDataObject);
-    console.log(globalArray);
+  
    
     // Clear the DataTable
     dataTable.clear();
@@ -66,7 +65,8 @@ if(globalArray.length == 0 || (idExist(formDataObject)===false)){
 
 // reset the input field to null
    // document.getElementById("myForm").reset();
-    $('dataToAdd').val('');
+   // $('.dataToAdd').val('');
+   clearForm();
   });
 
 
@@ -86,7 +86,8 @@ if(globalArray.length == 0 || (idExist(formDataObject)===false)){
 
     if(filteredDepartment.length == 0){
         alert("no data found");
-        dataTable.clear();     dataTable.draw();
+        dataTable.clear();    
+         dataTable.draw();
     }   
     else{
         dataTable.clear();
@@ -99,14 +100,75 @@ if(globalArray.length == 0 || (idExist(formDataObject)===false)){
     }
 
 // reset the input field to null
-   // $('select').val('');
-   clearForm();
+    clearForm();
   }); 
-
-  function clearForm(){
-    $('dataToAdd').val('');
-  }
+ 
 });
+
+function clearForm(){
+  $('.dataToAdd').val('');
+}
+function anyBlankField(formDataObject){
+
+  // formDataObject.each(function(data) {
+  //   if(data.val() == ''){return true;}
+      //  });
+
+
+// if((formDataObject.id == '') || (formDataObject.name == '')
+//  || (formDataObject.department == null) || (formDataObject.shift == null)){return false;}
+//  else{return true;}
+
+
+
+
+
+ // const keysof = Object.keys(formDataObject);
+  //for (var item in keysof) {
+   // var data = formDataObject.find(item=> item.val() == '')
+    //if(data){return true;} 
+  
+    // console.log(item,formDataObject[item])
+    // if( item.text  == ''){return true;}
+     //return false;
+
+
+   //var cnt=0;
+   $("#myForm .dataToAdd").each(function() {
+  //   if(data.type == text){ 
+  //  if(data.value == ''){}
+  // }
+  //   else if(data.type == select){ 
+  //  if(data.value == null){}
+  //}
+    
+  // });
+
+  if (!$('.dataToAdd').val()) {
+    alert('Enter your name!');
+}
+   });
+// return false;
+
+}
+
+
+
+
+//type() ->text     ''
+//
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -224,6 +286,123 @@ if(globalArray.length == 0 || (idExist(formDataObject)===false)){
 //array of objects in the data table with two different methods
 // first where we are clearing the data of the table each time and adding the recodes 
 // second where we are adding only the newly added data and tables previous records are not changed
+// now we are checking that if any value(id here) exist already in the dataYable then it should 
+// not re-enter the same id instead it should give the alert of id exist already 
+//------------------------------------------------------------------------------------------
+
+// var globalArray = [];
+
+// $(document).ready(function() {
+//   var dataTable = $('#dataTable').DataTable({
+//     columns: [
+//       { data: 'id', title: 'Id' },
+//       { data: 'name', title: 'Name' },
+//       { data: 'department', title: 'Department' },
+//       { data: 'shift', title: 'Shift' }
+//     ],
+//     lengthChange: false, 
+//     searching: false,
+//     info: false,        
+//     paging: false 
+//   });
+
+//   $("#submitButton").click(function(event) {
+//     event.preventDefault();
+
+//     var formDataObject = {};
+
+//     $("#myForm .dataToAdd").each(function() {
+//       var header = $(this).attr("name");
+//       formDataObject[header] = $(this).val();
+
+//    });
+   
+//     function idExist(formDataObject){
+    
+//     if(globalArray.find(item=>parseInt(item.id)===parseInt(formDataObject.id))){
+//       alert("ID already exists"); return true; }
+//    else { return false; }
+//  }
+//    // .has()
+
+// if(globalArray.length == 0 || (idExist(formDataObject)===false)){
+//     globalArray.push(formDataObject);
+//    }
+  
+//     //console.log(formDataObject);
+//     //.log(globalArray);
+   
+//     // Clear the DataTable
+//     dataTable.clear();
+
+//     // Add each row to the DataTable
+//     globalArray.forEach(function(data) {
+//       dataTable.row.add(data);
+//     });
+
+//     dataTable.draw();
+
+// // reset the input field to null
+//    // document.getElementById("myForm").reset();
+//     $('dataToAdd').val('');
+//   });
+
+
+ 
+
+//    //var newArray = [];
+//   $("#onSubmit").click(function(event) {
+//     event.preventDefault();
+
+//     var inputData = $("#exampleFormControlSelectoption").val();
+  
+//     //var filteredData;
+
+//     var filteredDepartment = globalArray.filter(item => item.department === inputData)
+   
+//    console.log(filteredDepartment);
+
+//     if(filteredDepartment.length == 0){
+//         alert("no data found");
+//         dataTable.clear();     dataTable.draw();
+//     }   
+//     else{
+//         dataTable.clear();
+
+//     // Add each row to the DataTable
+//     filteredDepartment.forEach(function(data) {
+//       dataTable.row.add(data);
+//     });
+//     dataTable.draw();
+//     }
+
+// // reset the input field to null
+//    // $('select').val('');
+//    clearForm();
+//   }); 
+
+//   function clearForm(){
+//     $('dataToAdd').val('');
+//   }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------------------------code where we are making a data table and adding the 
+//array of objects in the data table with two different methods
+// first where we are clearing the data of the table each time and adding the recodes 
+// second where we are adding only the newly added data and tables previous records are not changed
 //------------------------------------------------------------------------------------------
 // var globalArray = [];
 
@@ -259,6 +438,7 @@ if(globalArray.length == 0 || (idExist(formDataObject)===false)){
   
 //   });
 // });
+
 
 
 
