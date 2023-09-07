@@ -139,7 +139,7 @@ ALTER TABLE Customers_aarti ADD PRIMARY KEY (CustomerID);*/
 /* 11. SQL statement that selects records whose Contact name contains a “a” */  
 
  
-SELECT * FROM Customers_aarti WHERE LEN(ContactName) - LEN(REPLACE(ContactName, 'a', '')) = 1;
+/*SELECT * FROM Customers_aarti WHERE LEN(ContactName) - LEN(REPLACE(ContactName, 'a', '')) = 1;*/
 
    
 
@@ -149,7 +149,7 @@ SELECT * FROM Customers_aarti WHERE LEN(ContactName) - LEN(REPLACE(ContactName, 
 /*-- 12. SQL statement that lists the number of customers in each country, sorted by high to low*/
 
   
-SELECT Country, COUNT(*) as CountValue from Customers_aarti GROUP BY Country ORDER BY CountValue DESC;
+/*SELECT Country, COUNT(*) as CountValue from Customers_aarti GROUP BY Country ORDER BY CountValue DESC;*/
 
  
 
@@ -160,7 +160,7 @@ SELECT Country, COUNT(*) as CountValue from Customers_aarti GROUP BY Country ORD
 /*-- 13. SQL statement that creates a stored procedure named "SelectAllCustomers" that selects all records from the "Customers" table. */
 
   
-CREATE PROCEDURE SelectAllCustomers_Aarti AS BEGIN SELECT * FROM Customers_aarti END;
+/*CREATE PROCEDURE SelectAllCustomers_Aarti AS BEGIN SELECT * FROM Customers_aarti END;*/
 
  
 
@@ -172,7 +172,7 @@ CREATE PROCEDURE SelectAllCustomers_Aarti AS BEGIN SELECT * FROM Customers_aarti
 
  
 
-CREATE PROCEDURE GETCustomersViaCountry_Aarti
+/*CREATE PROCEDURE GETCustomersViaCountry_Aarti
 
     @City VARCHAR(255)
 
@@ -182,7 +182,13 @@ BEGIN
 
 SELECT * FROM Customers_aarti WHERE City=@City
 
-END; 
+END; */
+--(or)
+
+/*CREATE PROCEDURE procedure_name as 
+begin 
+select CustomerName, count(CustomerName) from Customers_aarti group by City 
+end*/
  
  
 
@@ -190,8 +196,11 @@ END;
 
   
 
-CREATE VIEW CustomersFromBr AS 
+/*CREATE VIEW CustomersFromTable AS 
 
 SELECT *
-FROM Customers_aarti
-WHERE Country = 'Brazil';
+FROM Customers_aarti*/
+
+/*SELECT * from CustomersFromTable*/
+
+

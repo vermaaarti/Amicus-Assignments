@@ -1,0 +1,90 @@
+CREATE TABLE Employees_Details_aarti(
+
+Empno INT CHECK(Empno>0 and Empno<=9999) NOT NULL Primary Key,
+
+Ename VARCHAR(20) NOT NULL,
+
+Job VARCHAR(15),
+
+Salary INT CHECK(Salary>0 and Salary<=9999999),
+
+Deptno INT CHECK(Deptno>0 and Deptno<=99) 
+
+);
+
+
+INSERT INTO Employees_Details_aarti (Empno, Ename, Job, Salary, Deptno)
+	VALUES 	
+	(7001, 'Sandeep', 'Analyst', 25000, 10),   
+	(7002, 'Rajesh', 'Designer', 30000, 10),    
+	(7003, 'Madhav', 'Developer', 40000, 20), 
+	(7004, 'Manoj', 'Developer', 40000, 20),  
+	(7005, 'Abhay', 'Designer', 35000, 10),  
+	(7006, 'Uma', 'Tester', 30000, 30),    
+	(7007, 'Gita', 'Tech. Writer', 30000, 40),   
+	(7008, 'Priya', 'Tester', 35000, 30),  
+	(7009, 'Nutan', 'Developer', 45000, 20),   
+	(7010, 'Smita', 'Analyst', 20000, 10),   
+	(7011, 'Anand', 'Project Mgr', 65000, 10);
+	
+	
+
+	
+CREATE PROCEDURE GetEmployeeSalariesDetail(@Operation VARCHAR(10))
+AS
+BEGIN
+    IF @Operation = 'SUM'
+    BEGIN
+        SELECT SUM(Salary) AS Result
+        FROM Employees_Details_aarti;
+    END
+    ELSE IF @Operation = 'AVG'
+    BEGIN
+        SELECT AVG(Salary) AS Result
+        FROM Employees_Details_aarti;
+    END
+    ELSE IF @Operation = 'LEAST'
+    BEGIN
+        SELECT TOP 10 *
+        FROM Employees_Details_aarti
+        ORDER BY Salary ASC;
+    END
+    ELSE IF @Operation = 'MAX'
+    BEGIN
+        SELECT MAX(Salary) AS Result
+        FROM Employees_Details_aarti;
+    END
+	ELSE IF @Operation = 'MIN'
+    BEGIN
+        SELECT MIN(Salary) AS Result
+        FROM Employees_Details_aarti;
+    END
+    ELSE
+    BEGIN
+        PRINT 'Invalid operation. Please use SUM, AVG, LEAST, MAX or MIN.';
+    END
+END;
+
+
+
+-- Give the sum of salaries
+EXEC GetEmployeeSalariesDetail 'SUM';
+
+
+-- Give the average of salaries
+EXEC GetEmployeeSalariesDetail 'AVG';
+
+
+-- Give the least top 10 salaries
+EXEC GetEmployeeSalariesDetail 'LEAST';
+
+
+-- Give the maximum salary
+EXEC GetEmployeeSalariesDetail 'MAX';
+
+
+-- Give the minimum salary
+EXEC GetEmployeeSalariesDetail 'MIN';
+
+-- Invalid operation will be like this
+EXEC GetEmployeeSalariesDetail 'GIVE_SOMETHING';

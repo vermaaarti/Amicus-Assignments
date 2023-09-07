@@ -68,10 +68,6 @@ $(document).ready(function() {
    // $('.dataToAdd').val('');
    clearForm();
   });
-
-
- 
-
    //var newArray = [];
   $("#onSubmit").click(function(event) {
     event.preventDefault();
@@ -134,22 +130,65 @@ function anyBlankField(formDataObject){
 
 
    //var cnt=0;
-   $("#myForm .dataToAdd").each(function() {
-  //   if(data.type == text){ 
-  //  if(data.value == ''){}
+
+  //  $("#myForm .dataToAdd").each(function(data) {
+  //   //console.log(data.attr('type'));
+
+  //   if(data.attr('type') == text){ 
+
+  //  if(data.value == ''){ alert("difjeriiur");}
   // }
-  //   else if(data.type == select){ 
+
+  //   else if(data.attr('type') == select){ 
   //  if(data.value == null){}
-  //}
-    
+  //}    
   // });
+//   if (!$('.dataToAdd').val()) {
+//     alert('Enter your name!');
+// }
 
-  if (!$('.dataToAdd').val()) {
-    alert('Enter your name!');
-}
-   });
-// return false;
+//   });
 
+
+//    $("#myForm .dataToAdd").each(function() {
+//     let control = $(this)
+//     console.log(this.name)
+// })
+var flag1;
+var flag2;
+$("#myForm .dataToAdd").each(function() {
+  let control = $(this);
+ var cnt=0;
+
+  if(control.attr('type') == 'text'){
+    console.log(control[0].value)
+ 
+     if(control[0].value== ''){
+ 
+       flag1=true;
+
+     }
+ 
+  }
+   if(control.attr('type') == 'select'){
+     console.log(control[0].value);
+   if(control[0].value ==null){
+
+    flag2 = true;
+ 
+  }
+ 
+   }
+  
+  console.log("dhifugrrrrrrrrrrrrrrrrrrr");
+ 
+  
+ 
+  //console.log(flag);
+})
+
+if(flag1==true && flag2==true){return true;}
+  // else{return false;}
 }
 
 

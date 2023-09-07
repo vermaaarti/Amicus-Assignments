@@ -449,11 +449,13 @@ SELECT Empno FROM EmpProjectTasks_aarti;*/
 
 
 
+
 --3. Display employee's name and job who worked on 'Code Change' task of project 401
 
 /*SELECT E.Ename, E.Job
 FROM Employees_aarti AS E INNER JOIN EmpProjectTasks_aarti AS T ON E.Empno = T.Empno 
 WHERE T.ProjectID = 401 AND T.Task = 'Code Change';*/
+
 
 
 
