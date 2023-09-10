@@ -158,7 +158,7 @@ var flag1;
 var flag2;
 $("#myForm .dataToAdd").each(function() {
   let control = $(this);
- var cnt=0;
+ //var cnt=0;
 
   if(control.attr('type') == 'text'){
     console.log(control[0].value)
@@ -183,11 +183,11 @@ $("#myForm .dataToAdd").each(function() {
   console.log("dhifugrrrrrrrrrrrrrrrrrrr");
  
   
- 
+  if(flag1==false && flag2==false){return true; console.log("dhgggggggggggggggggggg");}
   //console.log(flag);
 })
 
-if(flag1==true && flag2==true){return true;}
+
   // else{return false;}
 }
 
