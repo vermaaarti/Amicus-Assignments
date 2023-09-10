@@ -570,6 +570,18 @@ INNER JOIN Employees_aarti AS E ON D.Deptno = E.Deptno;*/
 
 
 
+--- procedure
+
+--CREATE PROCEDURE newProcudure  @Firstname varchar(255)
+--AS
+--BEGIN
+--SELECT LastName FROM Person_aarti WHERE FirstName = @Firstname
+--END;
+
+--execute fullname terri
+
+
+
 
 
 
