@@ -15,7 +15,8 @@ $(document).ready(function() {
     info: false,        
     paging: false 
   });
-
+  
+ // var arrToStoreShift = [];
   $("#submitButton").click(function(event) {
     event.preventDefault();
 
@@ -25,18 +26,12 @@ $(document).ready(function() {
       var header = $(this).attr("name");
       formDataObject[header] = $(this).val();
 
-   });
-   
-    function idExist(formDataObject){
-    
-    if(globalArray.find(item=>parseInt(item.id)===parseInt(formDataObject.id))){
-      alert("ID already exists"); return true; }
-   else { return false; }
- }
+   });  
+ 
    // .has()
-
-   if(anyBlankField(formDataObject) == true){
-    if(globalArray.length == 0 || (idExist(formDataObject)===false)){
+  
+   if(noBlankField(formDataObject) == true){
+    if(globalArray.length == 0 || (idExist(formDataObject)==false)){
       globalArray.push(formDataObject);
      }
     }
@@ -60,7 +55,9 @@ $(document).ready(function() {
    // $('.dataToAdd').val('');
    clearForm();
   });
-   //var newArray = [];
+  
+   //-----------------------------------------------------------------------------------------------
+   //---------------------------------code to check for the duplicate ID-------------------
   $("#onSubmit").click(function(event) {
     event.preventDefault();
 
@@ -91,91 +88,65 @@ $(document).ready(function() {
     clearForm();
   }); 
 
-  var arrToStoreShift = [];
+
+//------------------------------------------------------------------------------------upto here
+
+
+//     $("#onShiftSubmit").click(function(event) {
+//       event.preventDefault();
+  
+            
+//       var inputData = $("#Select1").val();
+//      // console.log( $("#Select1").val())
+//       //console.log(globalArray);
+//       globalArray = globalArray.map(item=> {
+//         if (item.shift === inputData) {
+//           item.shift = $("#Select2").val();
+//         }
+//         return item;
+//       });
+//     // });
+//          //dataTable.clear();
+
+//   // Add each row to the DataTable
+// // globalArray.forEach(function(data) {
+// //     dataTable.row.add(data);
+// //   });
+//   dataTable.draw();
+  
+//     });
+
+
+
+
     $("#onShiftSubmit").click(function(event) {
       event.preventDefault();
-  
-      
-      arrToStoreShift.push()
+    
       var inputData = $("#Select1").val();
-    
-     if(inputData == formDataObject.shift){
-      globalArray.map(item => item.shift = $("#Select2").val())
-     }
-    
-
-
-
-  //        if($("#Select1").val() != ''){
-  //  // var dataToMap = $("#Select2").val();
-  //  arrToStoreShift.push( $("#Select1").val());
-  //  jQuery.map(arrToStoreShift, function(val) {  
-  //   inputData = $("#Select2").val();
-
-  //   dataTable.clear();
-  //   globalArray.forEach(function(data) {
-  //           dataTable.row.add(data);
-  //         });
-  //         dataTable.draw();
-
-  //   }); 
-    
-  // } 
-
-
-
-
-
-
-
-
-
-
-
-
-
- // var inputShift = $("#Select1").val();
- // var outputShift = $("#Select2").val();
-  //var filteredData;
-  //var shiftArray = [];
- // shiftArray.push(inputShift);
-
-//  if()
- // var newShift =  shiftArray.map(inputShift = outputShift);
- 
- //console.log(filteredDepartment);
-
-  // if(filteredDepartment.length == 0){
-  //     alert("no data found");
-      // dataTable.clear();    
-      //  dataTable.draw();
-  //}   
- // else{
+        
+      globalArray = globalArray.map(function(item) {
+        if (item.shift == inputData) {
+          item.shift = $("#Select2").val();
+        }
+        return item;
+      });
+     
       dataTable.clear();
-
-  // Add each row to the DataTable
-  filteredDepartment.forEach(function(data) {
-    dataTable.row.add(data);
-  });
-  dataTable.draw();
-  //}
+      globalArray.forEach(function(data) {
+        dataTable.row.add(data);
+      });
+      dataTable.draw();
     });
+    
 
+    
+}); // -----------------------------------------------document.ready closing here----------------
 
-
-
-
-
-
-
-
- 
-});
 
 function clearForm(){
   $('.dataToAdd').val('');
 }
-function anyBlankField(formDataObject){
+function noBlankField(formDataObject){
 
 // if((formDataObject.id == '') || (formDataObject.name == '')
 //  || (formDataObject.department == null) || (formDataObject.shift == null)){return false;}
@@ -206,9 +177,14 @@ $("#myForm .dataToAdd").each(function() {
 })
 if(flag1==false && flag2==false){return true;}
   else{return false;}
+ }
+
+ function idExist(formDataObject){
+    
+  if(globalArray.find(item=>parseInt(item.id)===parseInt(formDataObject.id))){
+    alert("ID already exists"); return true; }
+ else { return false; }
 }
-
-
 
 
 
@@ -747,9 +723,9 @@ if(flag1==false && flag2==false){return true;}
 // if(globalArray.length == 0 || (idExist(formDataObject)===false)){
 //     globalArray.push(formDataObject);
 //    }
-  
+ //    // globalArray.push(formDataObject);
 //     //console.log(formDataObject);
-//     //.log(globalArray);
+    
    
 //     // Clear the DataTable
 //     dataTable.clear();
@@ -827,8 +803,8 @@ if(flag1==false && flag2==false){return true;}
 
 // $(document).ready(function() {
 //   // Initialize DataTable
-//  // var dataTable = $('#dataTable').DataTable();
-//   let dataTable = new DataTable('#dataTable');
+//   var dataTable = $('#dataTable').DataTable();
+//  // let dataTable = new DataTable('#dataTable');
 
 //   $("#submitButton").click(function(event) {
 //     event.preventDefault(); // Prevent the default button behavior
@@ -844,19 +820,23 @@ if(flag1==false && flag2==false){return true;}
 
 //     // when we want to clear the table record each time
 //    // Clear existing rows and populate the DataTable with new data
-//     dataTable.clear();
-//     globalArray.forEach(function(data) {
-//       dataTable.row.add([data.shift, data.department, data.name,  data.id]);
-//     });
-//     dataTable.draw();
+//     // dataTable.clear();
+//     // globalArray.forEach(function(data) {
+//     //   dataTable.row.add([data.shift, data.department, data.name,  data.id]);
+//     // });
+//     // dataTable.draw();
 
 //   // when we don't want to clear the table-data each time 
 //   // Add the new form data directly to the DataTable
-//   // dataTable.row.add([formDataObject.id, formDataObject.name,
-//   //    formDataObject.department, formDataObject.shift]).draw();
+//   dataTable.row.add([formDataObject.id, formDataObject.name,
+//      formDataObject.department, formDataObject.shift]).draw();
   
 //   });
 // });
+
+
+
+
 
 
 
@@ -881,7 +861,7 @@ if(flag1==false && flag2==false){return true;}
 //     paging: false 
 //   });
 
-//   $("#submitButton").click(function(event) {
+//    $("#submitButton").click(function(event) {
 //     event.preventDefault();
 
 //     var formDataObject = {};
@@ -914,4 +894,4 @@ if(flag1==false && flag2==false){return true;}
 
 
 
-
+//});
