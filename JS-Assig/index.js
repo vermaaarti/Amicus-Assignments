@@ -29,16 +29,30 @@ $(document).ready(function() {
    });  
  
    // .has()
+<<<<<<< HEAD
   
    if(noBlankField(formDataObject) == true){
     if(globalArray.length == 0 || (idExist(formDataObject)==false)){
+=======
+
+// if(anyBlankField(formDataObject)==true){ alert("some data fields are blank"); }
+// else{
+
+
+   if(anyBlankField(formDataObject) == true){
+    if(globalArray.length == 0 || (idExist(formDataObject)===false)){
+>>>>>>> 7267a4a18d5f054823ef41432a470e7c92b3e2b6
       globalArray.push(formDataObject);
      }
     }
-    else {
-      alert("some data fields are blank"); 
-  }
- 
+  //   else {
+  //     alert("some data fields are blank"); 
+  // }
+
+//});
+ // }
+  
+  
    
     // Clear the DataTable
     dataTable.clear();
@@ -67,7 +81,7 @@ $(document).ready(function() {
 
     var filteredDepartment = globalArray.filter(item => item.department === inputData)
    
-   //console.log(filteredDepartment);
+   console.log(filteredDepartment);
 
     if(filteredDepartment.length == 0){
         alert("no data found");
@@ -87,6 +101,7 @@ $(document).ready(function() {
 // reset the input field to null
     clearForm();
   }); 
+<<<<<<< HEAD
 
 
 //------------------------------------------------------------------------------------upto here
@@ -142,22 +157,72 @@ $(document).ready(function() {
     
 }); // -----------------------------------------------document.ready closing here----------------
 
+=======
+ 
+});
+>>>>>>> 7267a4a18d5f054823ef41432a470e7c92b3e2b6
 
 function clearForm(){
   $('.dataToAdd').val('');
 }
 function noBlankField(formDataObject){
 
+  // formDataObject.each(function(data) {
+  //   if(data.val() == ''){return true;}
+      //  });
+
+
 // if((formDataObject.id == '') || (formDataObject.name == '')
 //  || (formDataObject.department == null) || (formDataObject.shift == null)){return false;}
 //  else{return true;}
 
-var flag1 = false;
-var flag2 = false;
+
+
+
+
+ // const keysof = Object.keys(formDataObject);
+  //for (var item in keysof) {
+   // var data = formDataObject.find(item=> item.val() == '')
+    //if(data){return true;} 
+  
+    // console.log(item,formDataObject[item])
+    // if( item.text  == ''){return true;}
+     //return false;
+
+
+   //var cnt=0;
+
+  //  $("#myForm .dataToAdd").each(function(data) {
+  //   //console.log(data.attr('type'));
+
+  //   if(data.attr('type') == text){ 
+
+  //  if(data.value == ''){ alert("difjeriiur");}
+  // }
+
+  //   else if(data.attr('type') == select){ 
+  //  if(data.value == null){}
+  //}    
+  // });
+//   if (!$('.dataToAdd').val()) {
+//     alert('Enter your name!');
+// }
+
+//   });
+
+
+//    $("#myForm .dataToAdd").each(function() {
+//     let control = $(this)
+//     console.log(this.name)
+// })
+var flag1;
+var flag2;
 $("#myForm .dataToAdd").each(function() {
   let control = $(this);
+ //var cnt=0;
 
   if(control.attr('type') == 'text'){
+    console.log(control[0].value)
  
      if(control[0].value== ''){
  
@@ -167,14 +232,22 @@ $("#myForm .dataToAdd").each(function() {
  
   }
    if(control.attr('type') == 'select'){
-
-      if(control[0].value =='' || control[0].value ==null){
+     console.log(control[0].value);
+   if(control[0].value ==null){
 
     flag2 = true;
  
   }
-    }  
+ 
+   }
+  
+  console.log("dhifugrrrrrrrrrrrrrrrrrrr");
+ 
+  
+  if(flag1==false && flag2==false){return true; console.log("dhgggggggggggggggggggg");}
+  //console.log(flag);
 })
+<<<<<<< HEAD
 if(flag1==false && flag2==false){return true;}
   else{return false;}
  }
@@ -184,11 +257,17 @@ if(flag1==false && flag2==false){return true;}
   if(globalArray.find(item=>parseInt(item.id)===parseInt(formDataObject.id))){
     alert("ID already exists"); return true; }
  else { return false; }
+=======
+
+
+  // else{return false;}
+>>>>>>> 7267a4a18d5f054823ef41432a470e7c92b3e2b6
 }
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -552,6 +631,10 @@ if(flag1==false && flag2==false){return true;}
 
 //type() ->text       ----> ''
 // type() ->select   ----> null
+=======
+//type() ->text     ''
+//
+>>>>>>> 7267a4a18d5f054823ef41432a470e7c92b3e2b6
 
 
 

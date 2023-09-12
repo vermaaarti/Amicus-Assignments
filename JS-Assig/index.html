@@ -63,16 +63,20 @@
 </form>
 <!-- form data to check for the repeated id values -->
 <form>
+  <h5 class="mt-5">Enter department to filter</h5>
+  <div class="row">
    <div class=" col-6 form-group">
-    <select class="form-control mt-5 dataToAdd" id="exampleFormControlSelectoption" type="text">
-       <option value="A">A</option>
+       <select class="form-control mt-3 dataToAdd" id="exampleFormControlSelectoption" type="text">
+      <!-- <option value="A" disabled selected>enter department to filter</option> -->
+      <option value="A">A</option>
       <option value="B">B</option>
       <option value="C">C</option>
       <option value="D">D</option>
       <option value="E">E</option>
     </select>
   </div> 
-  <div class="col-6"><button type="submit" class="btn btn-primary" id="onSubmit">Submit</button></div>
+  <div class="col-6"><button type="submit" class="btn btn-primary mt-3" id="onSubmit">Submit</button></div>
+</div>
   </form>
 
  <div class="row mt-5">
@@ -100,7 +104,7 @@
     </select>
   </div>
  
-  <div class="col-4"><button type="submit" class="btn btn-primary mt-5" id="onShiftSubmit">Submit</button></div>
+  <div class="col-4"><button type="submit" style="margin-top: 33px;" class="btn btn-primary " id="onShiftSubmit">Submit</button></div>
 </div>
 <!-- </form> -->
 
@@ -137,7 +141,7 @@
  <script type="text/javascript"  src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
  <script type="text/javascript"  src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
  
- <script src="./index.js"></script>
+ <script src="./test.js"></script>
    <!-- bootstrap links -->
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
