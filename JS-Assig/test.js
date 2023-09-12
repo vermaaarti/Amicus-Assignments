@@ -70,9 +70,9 @@ $(document).ready(function() {
    //console.log(filteredDepartment);
 
     if(filteredDepartment.length == 0){
-        alert("no data found");
-        dataTable.clear();    
+          dataTable.clear();    
          dataTable.draw();
+         alert("no data found");
     }   
     else{
         dataTable.clear();
@@ -90,34 +90,6 @@ $(document).ready(function() {
 
 
 //------------------------------------------------------------------------------------upto here
-
-
-//     $("#onShiftSubmit").click(function(event) {
-//       event.preventDefault();
-  
-            
-//       var inputData = $("#Select1").val();
-//      // console.log( $("#Select1").val())
-//       //console.log(globalArray);
-//       globalArray = globalArray.map(item=> {
-//         if (item.shift === inputData) {
-//           item.shift = $("#Select2").val();
-//         }
-//         return item;
-//       });
-//     // });
-//          //dataTable.clear();
-
-//   // Add each row to the DataTable
-// // globalArray.forEach(function(data) {
-// //     dataTable.row.add(data);
-// //   });
-//   dataTable.draw();
-  
-//     });
-
-
-
 
     $("#onShiftSubmit").click(function(event) {
       event.preventDefault();
