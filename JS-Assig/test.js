@@ -114,10 +114,15 @@ $(document).ready(function() {
     
 }); // -----------------------------------------------document.ready closing here----------------
 
-
+/// function to clear the form data filled in the form input section after clicking the submit button
+//--------------------------------------------------------------------------------------
 function clearForm(){
   $('.dataToAdd').val('');
 }
+
+
+// function to check if all the input fields have any data and no input fields are blank
+//;-------------------------------------------------------------------------------------
 function noBlankField(formDataObject){
 
 // if((formDataObject.id == '') || (formDataObject.name == '')
@@ -151,6 +156,9 @@ if(flag1==false && flag2==false){return true;}
   else{return false;}
  }
 
+
+ // function to check whether any id(which we are adding in the form) are already existing in the 
+ //  data-table --------------------------------------------------------------------------------
  function idExist(formDataObject){
     
   if(globalArray.find(item=>parseInt(item.id)===parseInt(formDataObject.id))){
