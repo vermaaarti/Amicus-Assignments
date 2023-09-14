@@ -29,11 +29,10 @@ $(document).ready(function() {
    });  
  
    // .has()
-<<<<<<< HEAD
   
    if(noBlankField(formDataObject) == true){
     if(globalArray.length == 0 || (idExist(formDataObject)==false)){
-=======
+
 
 // if(anyBlankField(formDataObject)==true){ alert("some data fields are blank"); }
 // else{
@@ -41,7 +40,7 @@ $(document).ready(function() {
 
    if(anyBlankField(formDataObject) == true){
     if(globalArray.length == 0 || (idExist(formDataObject)===false)){
->>>>>>> 7267a4a18d5f054823ef41432a470e7c92b3e2b6
+
       globalArray.push(formDataObject);
      }
     }
@@ -101,7 +100,6 @@ $(document).ready(function() {
 // reset the input field to null
     clearForm();
   }); 
-<<<<<<< HEAD
 
 
 //------------------------------------------------------------------------------------upto here
@@ -157,10 +155,10 @@ $(document).ready(function() {
     
 }); // -----------------------------------------------document.ready closing here----------------
 
-=======
+
  
 });
->>>>>>> 7267a4a18d5f054823ef41432a470e7c92b3e2b6
+
 
 function clearForm(){
   $('.dataToAdd').val('');
@@ -247,7 +245,7 @@ $("#myForm .dataToAdd").each(function() {
   if(flag1==false && flag2==false){return true; console.log("dhgggggggggggggggggggg");}
   //console.log(flag);
 })
-<<<<<<< HEAD
+
 if(flag1==false && flag2==false){return true;}
   else{return false;}
  }
@@ -257,11 +255,11 @@ if(flag1==false && flag2==false){return true;}
   if(globalArray.find(item=>parseInt(item.id)===parseInt(formDataObject.id))){
     alert("ID already exists"); return true; }
  else { return false; }
-=======
+
 
 
   // else{return false;}
->>>>>>> 7267a4a18d5f054823ef41432a470e7c92b3e2b6
+
 }
 
 
