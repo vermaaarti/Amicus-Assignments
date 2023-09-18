@@ -1,49 +1,10 @@
 
-  //   const fetchData = document.getElementById("load-data");
+// loading data from API using fetch method
 
-  //   fetchData.addEventListener("click", function(){
+// const fetchData = document.getElementById("load-data");
 
-  //   fetch("http://universities.hipolabs.com/search?country=India")
-  //   .then(function(resolve){
-
-  //   if(!resolve.ok){
-  //   throw new Error("some error");
-  //   }
-  //   return resolve.json();
-  //   })
-  //   .then(function(myData){
-  //     console.log("do something here", myData);
-
-  // //    var dataTable = $('#dataTable').DataTable({
-  // //   columns: [
-  // //     { data: 'country', title: 'Country' },
-  // //     { data: 'name', title: 'Name' },
-  // //     { data: 'state', title: 'State' }
-  // //   ],
-  // //   lengthChange: false, 
-  // //   searching: false,
-  // //   info: false,        
-  // //   paging: false 
-  // // });
-
-         
-    
-  //   })
-  //   .catch(function(error){
-  //     console.log("some fetching error is there");
-  //   })
-
-  //   })
-
-
-
-
-
-
-
-
-
-
+//     fetchData.addEventListener("click", function(){
+  
 //   fetch('http://universities.hipolabs.com/search?country=India', {
 
 //   method: 'GET'
@@ -55,8 +16,27 @@
 // .then(data => {
 
 //   // Handle the data here
+//   // console.log('Data from API:', data);
 
-//   console.log('Data from API:', data);
+//   $('#dataTable').DataTable({
+
+//                   data: data,
+    
+//                   columns: [
+    
+//                       { data: 'country', title: 'Country' },
+    
+//                       { data: 'name', title: 'Name' },
+    
+//                       { data: 'state-province', title: 'State' }
+    
+//                   ],
+//                   lengthChange: false, 
+//         searching: false,
+//         info: false,        
+//         paging: false 
+    
+//               });
 
 // })
 
@@ -66,6 +46,7 @@
 
 // });
 
+//     });
 
 
 
@@ -74,30 +55,53 @@
 
 
 
-  
 
-  $(function(){
-  $.ajax({  
-    type: 'GET', 
-    url: 'http://universities.hipolabs.com/search?country=India',
-    //  dataType:'jsonp',
-    // cache: false,
-    //     crossDomain: true,
-        // jsonp: 'callback',   
-    success: function (data, status, xhr) {
-      console.log('data: ', data);
+// loading data from API using ajax
 
-      $('#dataTable').DataTable({
-        data: data,
-        columns: [
-              { data: 'country', title: 'Country' },
-              { data: 'name', title: 'Name' },
-              { data: 'state', title: 'State' }
-            ]           
-      }); 
-    },
-    error: function (xhr, status, error) {
-      console.log('there is some error', error);
-          }
-  });  
+const fetchData = document.getElementById("load-data");
+
+   fetchData.addEventListener("click", function(){
+
+  $.ajax({
+
+      type: 'GET',
+
+url: 'http://universities.hipolabs.com/search?country=India',
+
+    //  dataType: 'jsonp',
+
+      success: function(data) {
+
+         // console.log('data: ', data);
+
+          $('#dataTable').DataTable({
+
+              data: data,
+
+              columns: [
+
+                  { data: 'country', title: 'Country' },
+
+                  { data: 'name', title: 'Name' },
+
+                  { data: 'state-province', title: 'State' }
+
+              ],
+              lengthChange: false, 
+    searching: false,
+    info: false,        
+    paging: false 
+
+          });
+
+      },
+
+      error: function(xhr, status, error) {
+
+          console.log('there is some error', error);
+
+      }
+
+  });
+
 });
