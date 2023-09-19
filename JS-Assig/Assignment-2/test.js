@@ -1,107 +1,58 @@
 
-// loading data from API using fetch method
+$(document).ready(function(){
 
-// const fetchData = document.getElementById("load-data");
+let dataTable = intilizeDataTable();
 
-//     fetchData.addEventListener("click", function(){
-  
-//   fetch('http://universities.hipolabs.com/search?country=India', {
+$("#load-data").click(function () {
+     loadDataTable({ dataTable })  
+})  
 
-//   method: 'GET'
-
+// $(`#submit`).click(function(){
+//     addNewRowToDatatable({dataTable})
 // })
 
-// .then(response => response.json())
+})
 
-// .then(data => {
-
-//   // Handle the data here
-//   // console.log('Data from API:', data);
-
-//   $('#dataTable').DataTable({
-
-//                   data: data,
+function intilizeDataTable(){
+   return $('#dataTable').DataTable({
+        columns: [
     
-//                   columns: [
+            { data: 'country', title: 'Country' },
     
-//                       { data: 'country', title: 'Country' },
+            { data: 'name', title: 'Name' },
     
-//                       { data: 'name', title: 'Name' },
+            { data: 'state-province', title: 'State' }
     
-//                       { data: 'state-province', title: 'State' }
-    
-//                   ],
-//                   lengthChange: false, 
-//         searching: false,
-//         info: false,        
-//         paging: false 
-    
-//               });
-
-// })
-
-// .catch(error => {
-
-//   console.error('Error:', error);
-
-// });
-
-//     });
-
-
-
-
-
-
-
-
-
-// loading data from API using ajax
-
-const fetchData = document.getElementById("load-data");
-
-   fetchData.addEventListener("click", function(){
-
-  $.ajax({
-
-      type: 'GET',
-
-url: 'http://universities.hipolabs.com/search?country=India',
-
-    //  dataType: 'jsonp',
-
-      success: function(data) {
-
-         // console.log('data: ', data);
-
-          $('#dataTable').DataTable({
-
-              data: data,
-
-              columns: [
-
-                  { data: 'country', title: 'Country' },
-
-                  { data: 'name', title: 'Name' },
-
-                  { data: 'state-province', title: 'State' }
-
-              ],
-              lengthChange: false, 
+        ],
+        lengthChange: false, 
     searching: false,
     info: false,        
-    paging: false 
+    paging: false           
+    });
+}
 
-          });
+function loadDataTable({ dataTable })  {
+    $.ajax({
 
-      },
+        type: 'GET',
+        
+        url: 'http://universities.hipolabs.com/search?country=India',
+        
+        dataType: 'json',
+        success: function (data, textStatus, xhr) {
+                    dataTable.rows.add(data).draw()
+                },
+        
+        error: function (errorThrown, textStatus,  xhr) {
+                    console.log('Error in Operation', error);
+                }
+            
+            });
+        
+}
 
-      error: function(xhr, status, error) {
 
-          console.log('there is some error', error);
 
-      }
 
-  });
 
-});
+
