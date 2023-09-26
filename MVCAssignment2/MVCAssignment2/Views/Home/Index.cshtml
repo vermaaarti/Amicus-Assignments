@@ -1,0 +1,36 @@
+﻿@model MVCAssignment2.Models.DetailedInformation
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    <table class="table table-bordered">
+        <tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>@Model.EmployeeInfo.ID</td>
+            <td>@Model.EmployeeInfo.Name</td>
+            <td>@Model.EmployeeInfo.Age</td>
+            <td>@Model.EmployeeInfo.Address</td>
+            <td>@Model.EmployeeInfo.PhoneNumber</td>
+            <td>@Model.OfficeInfo.EmployeeDepartment</td>
+            <td>@Model.OfficeInfo.ManagerName</td>
+            <td>@Model.OfficeInfo.ManagerDepartment</td>
+        </tr>
+    </table>
+</div>
+
+
