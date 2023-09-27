@@ -1,0 +1,24 @@
+1. Create a new Asp.Net core mvc project. Create a controller named 'ProductsController' with the following action methods: 
+      I. Index()
+      II. Details(int id)
+      III. Edit(int id)
+     
+2. Create corresponding views for each action method in the 'Views/Products' folder and use the appropriate naming conventions for view files, such as "Index.cshtml", "Details.cshtml", etc.
+      
+3. Configure convention-based routing in 'Program.cs' file. set up routing conventions for the "ProductsController" to match the following patterns.
+      I. "/" should map to the "Index()" action.
+      II.  "AmicusProducts" should map to the "Index()" action.
+      III. "AmicusProducts/Index" should map to the "Index()" action.
+      IV. "AmicusProducts/Details/{Id}" should map to the "Details(int id)" action.
+     
+4.  Configure convention-based routing in 'Program.cs' file which handles all the routing conventions using a single pattern.
+      I. "/" should map to the "Index()" action.
+      II. "Products" should map to the "Index()" action.
+      III. "Products/Index" should map to the "Index()" action.
+      IV. "Products/Details/{Id}" should map to the "Details(int id)" action.
+
+5. Set up attribute routings for the "ProductsController" to match the following patterns.
+      I. "/" should map to the "Index()" action.
+      II.  "AmicusProducts" should map to the "Index()" action.
+      III. "AmicusProducts/Index" should map to the "Index()" action.
+      IV. "AmicusProducts/Details/{Id}" should map to the "Details(int id)" and input id should be integer with min length 3.
