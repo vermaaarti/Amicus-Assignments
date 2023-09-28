@@ -4,10 +4,7 @@ namespace Assignment1_attributeR.Controllers
 {
     public class ProductsController : Controller
     {
-       /* public IActionResult Index()
-        {
-            return View();
-        }*/
+      
         [Route("/")]
         [Route("/AmicusProducts")]
         [Route("/AmicusProducts/Index")]
@@ -16,14 +13,13 @@ namespace Assignment1_attributeR.Controllers
         {
             return View();
         }
-        [Route("AmicusProducts/Details/{id:int:min(100)}")]
-       // [Route("AmicusProducts/Details/{id}")]
+        [Route("AmicusProducts/Details/{id:int:minlength(3)}")]
+     
         public IActionResult Details(int id)
         {
-           // if (id > 99)
-          //  {
+        
                 return View();
-            //}
+         
             
         }
 
