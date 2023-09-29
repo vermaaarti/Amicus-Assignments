@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using MVCAssignment2.Models;
 using System.Data;
 using System.Diagnostics;
@@ -9,110 +10,88 @@ namespace MVCAssignment2.Controllers
 {
     public class HomeController : Controller
     {
+        
+       
+
+        private readonly string connectionString;
+        public HomeController(IConfiguration config)
+        {
+            connectionString = config.GetConnectionString("DefaultConnection");
+        }
+
+        public DataSet GetEmployeeOfficeInfo(int ID)
+
+            {
+                DataSet returnDataSet = new DataSet();
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+
+                {
+
+                    connection.Open();
+
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd.Connection = connection;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.CommandText = "getEmployeeOfficeDetails"; // Use the name of your stored procedure
+
+                    cmd.Parameters.Add(new SqlParameter("@EmpId", ID));
+
+                    SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
+
+                    dataAdp.Fill(returnDataSet);
+
+                    connection.Close();
+
+                }
+
+                  return returnDataSet;
+
+           
+        }
+
+        public DetailedInformation DatasetToDetailedInformation(DataSet dataSet)
+        {
+            var fTable = dataSet.Tables[0];
+            var sTable = dataSet.Tables[1];
+
+        List<EmployeeInfo>employeeInfos = fTable.AsEnumerable().Select(fdata =>
+        new EmployeeInfo()
+        {
+         ID = fdata.Field<int>("ID"),
+         Name = fdata.Field<string>("Name"),
+         Age = fdata.Field<int>("Age"),
+         Address = fdata.Field<string>("Address"),
+         PhoneNumber = fdata.Field<string>("PhoneNumber")
+        }).ToList();
+
+            List<OfficeInfo> officeInfos = sTable.AsEnumerable().Select(sdata =>
+            new OfficeInfo()
+            {
+                EmployeeDepartment = sdata.Field<string>("EmployeeDepartment"),
+                ManagerName = sdata.Field<string>("ManagerName"),
+                ManagerDepartment = sdata.Field<string>("ManagerDepartment"),
+            }).ToList();
+
+            DetailedInformation completeInfo = new DetailedInformation(employeeInfos[0], officeInfos[0]);
+           
+            return completeInfo;
+        }
+
+        public ActionResult ViewEmployeeInfo(int ID)
+        {
+            DataSet dataSet = GetEmployeeOfficeInfo(ID);
+            DetailedInformation result = DatasetToDetailedInformation(dataSet);
+            return View(result);
+        }
         public IActionResult Index()
         {
             return View();
         }
-        public List<DetailedInformation> TotalList()
-        {
-
-            EmployeeInfo employee1 = new EmployeeInfo()
-            {
-                ID = 1,
-                Name = "Test",
-                Age = 25,
-                Address = "Raipur",
-                PhoneNumber = "1234567890"
-            };
-            EmployeeInfo employee2 = new EmployeeInfo()
-            {
-                ID = 2,
-                Name = "Test",
-                Age = 25,
-                Address = "Raipur",
-                PhoneNumber = "1234567890"
-            };
-            EmployeeInfo employee3 = new EmployeeInfo()
-            {
-                ID = 3,
-                Name = "Test",
-                Age = 25,
-                Address = "Raipur",
-                PhoneNumber = "1234567890"
-            };
-
-            OfficeInfo office1 = new OfficeInfo()
-            {
-                EmployeeDepartment = "IT",
-                ManagerName = "Testmanager",
-                ManagerDepartment = "IT"
-            };
-            OfficeInfo office2 = new OfficeInfo()
-            {
-                EmployeeDepartment = "IT",
-                ManagerName = "Testmanager",
-                ManagerDepartment = "IT"
-            };
-            OfficeInfo office3 = new OfficeInfo()
-            {
-                EmployeeDepartment = "IT",
-                ManagerName = "Testmanager",
-                ManagerDepartment = "IT"
-            };
-
-
-
-            // Created a list to store combined data
-            List<DetailedInformation> detailedInformation = new List<DetailedInformation>();
-
-            // Adding data to the combined list
-            detailedInformation.Add(new DetailedInformation() { EmployeeInfo = employee1, OfficeInfo = office1 });
-            detailedInformation.Add(new DetailedInformation() { EmployeeInfo = employee2, OfficeInfo = office2 });
-            detailedInformation.Add(new DetailedInformation() { EmployeeInfo = employee3, OfficeInfo = office3 });
-
-
-
-            return detailedInformation;
-        }
-
-        [Route("/demo/{id}")]
-     public IActionResult ViewEmployeeInfo(int id)
-    {
-            /*var test = TotalList().Find(p=> p.EmployeeInfo.ID == id);
-
-             ViewData["Title"] = test.EmployeeInfo.Name;
-
-
-             return View(test);*/
-
-
-
-
-
-           /* public DataSet GetRequestDetailDA(int requestId, string userIdentity)
-            {
-                DataSet returnDataSet = new DataSet();
-                using (SqlConnection connection = new SqlConnection(_connStr))
-                {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = connection;
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "[uspGetRequestDetail]";
-                    cmd.Parameters.Add(new SqlParameter("@RequestId", requestId));
-                    cmd.Parameters.Add(new SqlParameter("@UserIdentity", userIdentity));
-                    SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
-                    dataAdp.Fill(returnDataSet);
-                    connection.Close();
-                }
-                return returnDataSet;
-            }*/
-
-
-        }
-
-
-    public IActionResult Privacy()
+        public IActionResult Privacy()
 		{
 			return View();
 		}
@@ -122,5 +101,8 @@ namespace MVCAssignment2.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
-	}
+
+
+
+    }
 }

@@ -4,29 +4,13 @@
 // Write your JavaScript code.
 
 var show;
-$("#SubmitBtn").click(function () {
+$("#SubmitBtn").click(function (event) {
+    event.preventDefault();
     show = $('#textInput').val();
    // console.log(show);
 
 
+    window.location.href = "Home/ViewEmployeeInfo/" + show;
 
-$.ajax({
-
-    type: 'GET',
-
-    url: '/Home/ViewEmployeeInfo',
-
-    data: { id: show },
-    success: function (data, textStatus, xhr) {
-        //operation
-      
-
-    },
-
-    error: function (errorThrown, textStatus, xhr) {
-        console.log('Error in Operation', error);
-    }
-
-});
 
 });
