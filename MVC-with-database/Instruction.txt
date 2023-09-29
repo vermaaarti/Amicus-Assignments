@@ -1,0 +1,4 @@
+created two different tables in SSMS connected by foreign key
+
+created procedure for getting data from both the tables
+
