@@ -1,0 +1,22 @@
+﻿@model EmployeeInfo
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h3>Employee's Data</h3>
+    <table class="table table-bordered">
+        
+        <tr>
+            <td>@Model.ID</td>
+            <td>@Model.Name</td>
+            <td>@Model.Age</td>
+            <td>@Model.Address</td>
+            <td>@Model.PhoneNumber</td>
+            
+        </tr>
+
+    </table>
+</div>
+
+

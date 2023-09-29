@@ -1,0 +1,18 @@
+﻿@model OfficeInfo
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div>
+    <h3>Office's Data</h3>
+    <table class="table table-bordered">
+        
+        <tr>           
+            <td>@Model.EmployeeDepartment</td>
+            <td>@Model.ManagerName</td>
+            <td>@Model.ManagerDepartment</td>
+        </tr>
+
+    </table>
+</div>
+
+
