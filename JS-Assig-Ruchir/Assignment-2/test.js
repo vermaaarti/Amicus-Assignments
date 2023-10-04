@@ -24,7 +24,7 @@ function intilizeDataTable(){
             { data: 'state-province', title: 'State' }
     
         ],
-        lengthChange: false, 
+    lengthChange: false, 
     searching: false,
     info: false,        
     paging: false           

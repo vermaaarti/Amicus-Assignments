@@ -67,7 +67,7 @@ $(document).ready(function() {
    // document.getElementById("myForm").reset();
    // $('.dataToAdd').val('');
    clearForm();
-  });
+  }}
   
    //-----------------------------------------------------------------------------------------------
    //---------------------------------code to check for the duplicate ID-------------------
@@ -101,7 +101,7 @@ $(document).ready(function() {
     clearForm();
   }); 
 
-
+  });
 //------------------------------------------------------------------------------------upto here
 
 
@@ -152,8 +152,7 @@ $(document).ready(function() {
     });
     
 
-    
-}); // -----------------------------------------------document.ready closing here----------------
+     // -----------------------------------------------document.ready closing here----------------
 
 
  
@@ -261,33 +260,6 @@ if(flag1==false && flag2==false){return true;}
   // else{return false;}
 
 }
-
-
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // var globalArray = [];
 
@@ -629,10 +601,10 @@ if(flag1==false && flag2==false){return true;}
 
 //type() ->text       ----> ''
 // type() ->select   ----> null
-=======
+
 //type() ->text     ''
 //
->>>>>>> 7267a4a18d5f054823ef41432a470e7c92b3e2b6
+
 
 
 
