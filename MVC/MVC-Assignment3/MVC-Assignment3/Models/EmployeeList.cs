@@ -4,7 +4,7 @@
     {
         public int EmployeeId { get; set; }
         public int DepartmentId { get; set; }
-        public int SalaryInformatonId { get; set; }
+        public int SalaryInformationId { get; set; }
 
 
 

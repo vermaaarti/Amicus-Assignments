@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KIa82aC+9OxSizfCGpn3FDAu80hz392pVZH9124UVM8=",
+  "Hash": "vLnSx5Bj0jiirqB6YePO2jJPmjojU2QmC8DkNPIPY1s=",
   "Source": "MVC-Assignment3",
   "BasePath": "_content/MVC-Assignment3",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\customapps\\MVC-Assignment3\\MVC-Assignment3\\wwwroot\\js\\employeelist.js",
+      "SourceId": "MVC-Assignment3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\customapps\\MVC-Assignment3\\MVC-Assignment3\\wwwroot\\",
+      "BasePath": "_content/MVC-Assignment3",
+      "RelativePath": "js/employeelist.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\employeelist.js"
     },
     {
       "Identity": "D:\\customapps\\MVC-Assignment3\\MVC-Assignment3\\wwwroot\\js\\site.js",

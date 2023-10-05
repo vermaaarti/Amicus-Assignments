@@ -1,28 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using MVC_Assignment3.Models;
+using MVCAssignment2.Models;
 using System.Data;
+//json stringBuilder
+//using static System.Net.Mime.MediaTypeNames;
+//using System.Text;
+
 
 namespace MVC_Assignment3.Controllers
 {
     public class EmployeeController : Controller
     {
-        
-            public IActionResult EmployeeList()
-        {
-            return View();
-        }
 
-
-        /*private readonly string connectionString;
-        public HomeController(IConfiguration config)
+        private readonly string connectionString;
+        public EmployeeController(IConfiguration config)
         {
             connectionString = config.GetConnectionString("DefaultConnection");
         }
-
-        public DataSet GetEmployeeOfficeInfo(int ID)
+        public DataTable EmployeeData()
 
         {
-            DataSet returnDataSet = new DataSet();
+            DataTable returnDataTable = new DataTable();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
 
@@ -36,57 +35,52 @@ namespace MVC_Assignment3.Controllers
 
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.CommandText = "getEmployeeOfficeDetails"; // Use the name of your stored procedure
-
-                cmd.Parameters.Add(new SqlParameter("@EmpId", ID));
+                cmd.CommandText = "DepartmentEmployeeSalaryDetail"; // Use the name of your stored procedure
 
                 SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
 
-                dataAdp.Fill(returnDataSet);
+                dataAdp.Fill(returnDataTable);
 
                 connection.Close();
 
             }
 
-            return returnDataSet;
-
-
+            return returnDataTable;
         }
 
-        public DetailedInformation DatasetToDetailedInformation(DataSet dataSet)
+        public List<object> ConvertTableIntoModel(DataTable returnDataTable)
         {
-            var fTable = dataSet.Tables[0];
-            var sTable = dataSet.Tables[1];
+            List<object> objectList = new List<object>();
 
-            List<EmployeeInfo> employeeInfos = fTable.AsEnumerable().Select(fdata =>
-            new EmployeeInfo()
+            foreach (DataRow dr in returnDataTable.Rows)
             {
-                ID = fdata.Field<int>("ID"),
-                Name = fdata.Field<string>("Name"),
-                Age = fdata.Field<int>("Age"),
-                Address = fdata.Field<string>("Address"),
-                PhoneNumber = fdata.Field<string>("PhoneNumber")
-            }).ToList();
+                EmployeeList newObj = new EmployeeList();
+             
+                newObj.EmployeeId = Convert.ToInt32(dr["EmployeeId"]);  // Beware of the possible conversion errors due to type mismatches
+                newObj.EmployeeName = dr["EmployeeName"].ToString();
+                newObj.DepartmentId = Convert.ToInt32(dr["DepartmentId"]);
+                newObj.SalaryInformationId = Convert.ToInt32(dr["SalaryInformatonId"]);
+                newObj.DepartmentName = dr["DepartmentName"].ToString();
+                newObj.AmountPerYear = Convert.ToInt32(dr["AmountPerYear"]);
+                 newObj.IsDeleted = 0;
 
-            List<OfficeInfo> officeInfos = sTable.AsEnumerable().Select(sdata =>
-            new OfficeInfo()
-            {
-                EmployeeDepartment = sdata.Field<string>("EmployeeDepartment"),
-                ManagerName = sdata.Field<string>("ManagerName"),
-                ManagerDepartment = sdata.Field<string>("ManagerDepartment"),
-            }).ToList();
-
-            DetailedInformation completeInfo = new DetailedInformation(employeeInfos[0], officeInfos[0]);
-
-            return completeInfo;
+                objectList.Add(newObj);
+            }
+            return objectList;
         }
 
-        public ActionResult ViewEmployeeInfo(int ID)
+        public IActionResult JSONEmployeeData()
         {
-            DataSet dataSet = GetEmployeeOfficeInfo(ID);
-            DetailedInformation result = DatasetToDetailedInformation(dataSet);
-            return View(result);
-        }*/
+            var Data = ConvertTableIntoModel(EmployeeData());
+            return Ok(Data);
+        }
+
+        
+        public IActionResult EmployeeList()
+        {
+             return View();
+        }
+
 
     }
 }
