@@ -1,11 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using MVC_Assignment3.Models;
-using MVCAssignment2.Models;
 using System.Data;
-//json stringBuilder
-//using static System.Net.Mime.MediaTypeNames;
-//using System.Text;
+
 
 
 namespace MVC_Assignment3.Controllers
