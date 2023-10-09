@@ -1,0 +1,44 @@
+1. Create a model EmployeeInfo.cs : EmployeeId, EmployeeName, EmployeeDepartment, IsDeleted
+2. Create a model SalaryInfo.cs : EmployeeId, AmountPerYear
+3. Create a model DetailedInfo.cs to get EmployeeInfo and SalaryInfo of the employees.
+4. Create tables in SQL Server :
+
+     1. DepartmentMaster : DepartmentMasterId (int, primary key IDENTITY(1,1) ), DepartmentName (nvarchar(500))   ==>  Possible values : IT, Finance, HR
+     2. EmployeeMaster : EmployeeId(int, primary key IDENTITY(1,1)), EmployeeName(nvarchar(500)) , DepartmentId(int, foreign key)
+     3. SalaryInformation : SalaryInformatonId (int, primary key IDENTITY(1,1)) ,EmployeeId(int, foreign key), AmountPerYear(decimal(10,2))
+
+
+5. EmployeeController.cs
+
+   1. Create a method in EmployeeController.cs to return the json of list of DetailedInfo of all the employees from SQL.
+   2. Create an action EmployeeList() to return the corresponding View : EmployeeList.cshtml
+   3. EmployeeList.cshtml should contain a table to display list of employee information with a "Save","Delete" and "Add Employee" button at the top.
+   4. Create a javascript file : employeelist.js
+       a.) Initialise the employee list table to a datatable with four columns : 
+              1) Checkbox to select the employee
+              2) EmployeeName (should be a hyperlink)
+              3) EmployeeDepartment ( Text color should be yellow for IT, green for Finance, orange for HR)
+              4) AmountPerYear(should be a editable textbox with salaryamount binded)
+
+       b.) Create a global array and perform an ajax call to get EmployeeList json and use that global array to bind the datatable.
+
+       c.) Allow editing the salaryamount from the textbox in datatable, on change of which, relevant employee object of global array should get updated. (Use relavant js array method)
+       
+       d.) Perform an ajax call to call an action in the controller which will take the updated array and call a procedure to update salary in relevant sql table.Do page load on success.
+
+       e.) Checking/Unchecking of the checkbox should add a new key in the global array (IsDeleted) with value 1 or 0 (use relavant js array method). Clicking on the delete button will filter the global array with IsDeleted = 1
+           and pass the filtered array in the ajax call till the procedure to delete those employees.
+
+       f.) Clicking on the EmployeeName hyperlink should go to action : EmployeeDetailView(int employeeId)
+
+              a.) Create a procedure to fetch employeedetails as per employeeId and bring the information to the EmployeeDetailView.cshtml
+              b.) Use "strongly-typed" HTML Helpers to create textbox for each fields. Use a dropdown for the department field. Fields should be editable.
+              c.) Create a save button to do an ajax call to store detailed information of the employees in the backend. Return to the employee list on success of ajax.
+        
+
+       g.) Clicking on "Add Employee" should call an action:  AddEmployee() 
+           
+             a.) It should go to the same view EmployeeDetailView.cshtml. 
+             b. Clicking on the save button should do an ajax call to insert the new employee. Return to the employee list on success of ajax.
+
+5. Use ViewData to give appropriate titles to the html pages.

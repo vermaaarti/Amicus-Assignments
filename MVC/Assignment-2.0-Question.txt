@@ -1,0 +1,7 @@
+1. Create a model class EmployeeInfo to store employee information  : ID, Name, Age , Address , Phone Number.
+2. Create a model class OfficeInfo to store employee office information : Employee Department, Manager Name, Manager Department.
+3. Create a viewmodel class DetailedInformation which will store information of types EmployeeInfo and OfficeInfo.
+4. Create a method in a controller to return the list of DetailedInformation of various employees.
+5. Create a controller action ViewEmployeeInfo (int id) which will fetch appropriate employee information as per id passed from the list and pass it on the corresponding view.
+6. Call two separate partial views  in the ViewEmployeeInfo view to show employee information and office information.
+7. Use ViewData to set the title of the view to the Employee Name.
