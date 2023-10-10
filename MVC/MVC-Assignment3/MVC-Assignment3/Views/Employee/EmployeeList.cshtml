@@ -1,7 +1,8 @@
 ﻿@model EmployeeList
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Employee_List_Page";
 }
+
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -12,25 +13,11 @@
 
 <div>
     <h3>Employee's Data</h3>
-    <table class="table table-bordered">
-        <tr>
-            <button type="button" class="btn btn-info m-2">Save</button>
-            <button type="button" class="btn btn-info m-2">Delete</button>
-            <button type="button" class="btn btn-info m-2">Add Employee</button>
-        </tr>
-        <tr>
-            @*<td>@Model.EmployeeId</td>
-            <td>@Model.EmployeeName</td>
-            <td>@Model.DepartmentId</td>
-            <td>@Model.DepartmentName</td>
-            <td>@Model.SalaryInformationId</td>
-            <td>@Model.AmountPerYear</td>
-            <td>@Model.IsDeleted </td>*@
+ 
+            <button type="button" onclick="SaveEmployee(event)" class="btn btn-info m-2">Save</button>
+    <button type="button" onclick="DeleteEmployee(event)" class="btn btn-info m-2">Delete</button>
+    <button type="button" onclick="AddNewEmployee(event)" class="btn btn-info m-2">Add Employee</button>
        
-
-        </tr>
-
-    </table>
 
     <table id="dataTable" class="table table-bordered">
         <thead>
@@ -39,6 +26,9 @@
                 <th>employeeName</th>
                 <th>EmployeeDepartment</th>
                <th id="amountField">AmountPerYear</th>
+               
+
+          
 
 
             </tr>

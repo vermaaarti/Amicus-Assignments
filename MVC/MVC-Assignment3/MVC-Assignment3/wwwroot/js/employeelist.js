@@ -1,4 +1,4 @@
-﻿var globalArray = [];
+﻿let globalArray = [];
 $(document).ready(function () {
 
       
@@ -17,10 +17,7 @@ $(document).ready(function () {
         }
     });
 
-   // trackChanges(data);
    
-
-
 
     
 
@@ -34,24 +31,24 @@ function intilizeDataTable(data) {
 
             
             {
-                "data": "employeeName",
-                "render": function (data, type, full, meta) {
-                    return '<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">' ;
+                "data": "",
+                "render": function (data, type, row) {
+                  return `<input  class="form-check-input" type="checkbox" value="" id="EmpId" onchange=changeisDeleted(event,${row.employeeId})>` ;
                 },
 
             }, 
 
             {
                "data": "employeeName",
-                "render": function (data, type, full, meta) {
-                    return '<a href="">' + data + '</a>';
+                "render": function (data, type, row) {
+                    return '<a href="/Employee/EmployeeDetailView/?id=' + row.employeeId + '">' + data + '</a>';
                 },
                
             },
 
           {
               data: 'departmentName', render: function (data, type, row) {
-                  var color = 'black';
+                  let color = 'black';
                   if (data == 'IT') {
                       color = 'yellow';
                   }
@@ -66,10 +63,9 @@ function intilizeDataTable(data) {
 
              {
                 "data": "amountPerYear",
-                 "render": function (data, type, full, meta) {
-                     var inputData = $("#amount").val();
-                     console.log(inputData);
-                    return '<input type="text" onchange="myFunction(this.value)" class="form-control" id="amount" value='+data+'>';
+                 "render": function (data, type,row) {
+                     return `<input type="text" onchange=updateSalary(event,${row.employeeId}) 
+                    class="form-control"  value=${data} id="amount" >`;
                 }
 
             },
@@ -84,59 +80,87 @@ function intilizeDataTable(data) {
 
 }
 
-function myFunction(val) {
+function updateSalary(event, id) {
 
-    alert("The input value has changed. The new value is: " + val);
-   // $('amountField').text(this.AmountPerYear) = val;
-    globalArray = globalArray.map(function (item) {
-        if (inputData != val) {
-            globalArray.forEach(function (data) {
-                globalArray.amountPerYear = val;
-                console.log("data added");
 
-            });
+    const newSalary = event.target.value;
+
+    globalArray.map(employee => {
+        if (employee.employeeId == id) {
+            employee.amountPerYear = newSalary;
+            employee.isModified = 1;
         }
-       // return item;
-        
-    });
-   
+    })
+    console.log(globalArray);
    
 }
 
-/*function trackChanges(data) {
+function changeisDeleted(event, id) {
+    if (event.target.checked) {
+        globalArray.map(data => {
+            if (data.employeeId == id) {
+                data.isDeleted = 1;
+            }
+        })
+    }
+}
 
-  
-    var table = $('#dataTable').DataTable();
+function SaveEmployee(event) {
 
+    event.preventDefault();
 
+    $.ajax({
+        type: 'POST',
+        url: '/Employee/UpdatedData',
+        data: { employeeList: globalArray },
+        success: function (data) {
 
-    // Event handler for cell edit
-
-    table.on('cell().data()', function (e, datatable, cell) {
-
-        var originalValue = cell.data();
-
-        var editedValue = cell.node().innerText.trim(); // Get the current cell's text
-
-
-
-        if (originalValue !== editedValue) {
-
-            // The value has been edited
-
-            console.log("Value edited from " + originalValue + " to " + editedValue);
-
-
-
-            // You can perform further actions here, like updating a global variable or sending the data to the server.
-
+            console.log(data);
+        },
+        error: function (errorThrown, textStatus, xhr) {
+            console.log('Error in Operation');
         }
-
     });
+}
 
-}*/
 
-//function intilizeDataTable(data) {
+ function DeleteEmployee(event) {
+
+    event.preventDefault();
+     const dleArray = globalArray.filter(emp => emp.isDeleted == 1);
+     $.ajax({
+         type: 'POST',
+         url: '/Employee/DeleteEmployeeData',
+         data: { employeeList: dleArray } ,
+        success: function (data) {
+
+            console.log(data);
+        },
+        error: function (errorThrown, textStatus, xhr) {
+            console.log('Error in Operation');
+        }
+    });
+}
+
+function AddNewEmployee(event) {
+
+    event.preventDefault();
+    window.location.href = "/Employee/EmployeeDetailView/-1";
+
+}
+
+
+
+
+
+
+
+   
+
+
+
+
+
 
 
 

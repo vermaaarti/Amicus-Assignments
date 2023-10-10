@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\customapps\MVC-Assignment3\MVC-Assignment3
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/customapps/MVC-Assignment3/MVC-Assignment3/Views/Employee/EmployeeDetailView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wbG95ZWVEZXRhaWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/customapps/MVC-Assignment3/MVC-Assignment3/Views/Employee/EmployeeList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRW1wbG95ZWVMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
