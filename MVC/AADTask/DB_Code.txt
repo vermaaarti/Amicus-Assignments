@@ -1,0 +1,84 @@
+/*create table employee_aarti(
+employeeid int primary key not null, 
+employeemail nvarchar(30) UNIQUE,
+employeename nvarchar(20),
+)*/
+
+
+/*create table role_aarti(
+roleid int primary key not null,
+rolename nvarchar(40)
+)*/
+
+/*create table employeeRole_aarti(
+employeeroleid int primary key not null,
+employeeid int,
+roleid int,
+FOREIGN KEY (employeeid) REFERENCES employee_aarti(employeeid),
+FOREIGN KEY (roleid) REFERENCES role_aarti(roleid)
+)*/
+
+
+/*insert into employee_aarti(employeeid, employeemail, employeename)
+values
+
+(1, 'aarti_verma@amicusglobal.com', 'Aarti'),
+(2, 'chandan_soni@amicusglobal.com', 'Chandan')*/
+
+
+
+
+
+/*insert into role_aarti(roleid,rolename)
+values
+(1, 'admin'),
+(2, 'superadmin'),
+(3, 'analyst')*/
+
+
+/*insert into employeeRole_aarti(employeeroleid, employeeid,roleid)
+values
+(9,1,2)
+(8,2,2)
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3),
+(4, 1, 3),
+(5, 2, 1),
+(6, 2, 3),
+(7, 1, 1)
+*/
+
+
+--select * from employee_aarti
+--select * from role_aarti
+--select * from employeeRole_aarti
+
+
+
+
+-- creating stored procedure
+
+/*CREATE PROCEDURE EmployeeRolesInfo
+
+ @Email NVARCHAR(255)
+ 
+ AS
+  BEGIN
+   
+ SELECT  E.employeemail, E.employeename, R.rolename
+    FROM employee_aarti AS E
+    INNER JOIN employeeRole_aarti AS ER ON E.employeeid = ER.employeeid
+    INNER JOIN role_aarti AS R ON ER.roleid = R.roleid
+	where E.employeemail = @Email
+
+  END;
+  */
+  
+
+ --EXEC EmployeeRolesInfo @Email = 'aarti_verma@amicusglobal.com'
+
+
+
+
+
