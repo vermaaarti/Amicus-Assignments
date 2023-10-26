@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace AADTask.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="analyst,admin")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

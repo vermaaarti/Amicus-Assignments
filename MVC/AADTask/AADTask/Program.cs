@@ -52,8 +52,8 @@ namespace AADTask
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller}/{action}"
-                , defaults: new { controller = "Home", action = "Index" });
+                pattern: "{controller}/{action}",
+                defaults: new { controller = "Home", action = "Index" });
 
             app.Run();
         }

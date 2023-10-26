@@ -40,6 +40,8 @@ namespace AADTask.DBdata
 
                     RoleName = firstData.Field<string>("RoleName"),
 
+                    EmployeeName = firstData.Field<string>("employeename"),
+
                 }).ToList();
 
             return RoleList;

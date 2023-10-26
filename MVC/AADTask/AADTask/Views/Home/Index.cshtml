@@ -5,13 +5,13 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
    
-    <p>Email: @ViewData["name"] </p>
+    <p>Email: @ViewData["name"] </p> 
 </div>
 
 
 @if (User.IsInRole("admin"))
 {
-    <p>User is an admin.</p>
+    <p> User is an admin.</p>
 }
 
 @if (User.IsInRole("superadmin"))
@@ -21,6 +21,6 @@
 
 @if (User.IsInRole("analyst"))
 {
-    <p>User is a analyst.</p>
+    <p>User is an analyst.</p>
 }
 

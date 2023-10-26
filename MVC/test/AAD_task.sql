@@ -38,9 +38,16 @@ values
 
 /*insert into employeeRole_aarti(employeeroleid, employeeid,roleid)
 values
+(9,1,2)
+(8,2,2)
 (1, 1, 1),
 (2, 2, 2),
-(3, 3, 3)*/
+(3, 3, 3),
+(4, 1, 3),
+(5, 2, 1),
+(6, 2, 3),
+(7, 1, 1)
+*/
 
 
 --select * from employee_aarti
