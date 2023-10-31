@@ -1,0 +1,43 @@
+﻿@model AllEmployee
+@{
+    ViewData["Title"] = "All_Employee_Page";
+}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--Data Table-->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="~/js/JavaScript.js"></script>
+
+
+
+<div>
+    <h3> Employee Master Page</h3>
+
+<!--<button type="button" onclick="SaveEmployee(event)" class="btn btn-info m-2">Save as draft</button>-->
+    <button type="button" onclick="SaveEmployee(event)" class="btn btn-info m-2">Save as Draft</button>
+
+    <button type="button" onclick="AddNewEmployee(event)" class="btn btn-info m-2">Add Employee</button>
+
+    <table id="dataTable" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Employee Name</th>
+                <th>Email</th>
+            <th>Manager Name</th>
+            <th>Department</th>
+           <!-- <th>Performance Rating</th>-->
+                <th>PlannerName</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data rows will be dynamically added by DataTables -->
+    </tbody>
+
+</table>
+</div>
+
+
+

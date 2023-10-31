@@ -1,0 +1,55 @@
+﻿@model List<AllEmployee>
+
+@{
+    ViewData["Title"] = "Employee_Data_List_by_Planner";
+}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--Data Table-->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="~/js/JavaScript.js"></script>
+
+<table id="dataTable" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Employee Name</th>
+         
+            <th>Manager Name</th>
+            <th>Department</th>
+            <th>Performance Rating</th>
+        
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeName</td>
+               
+                <td>@item.ManagerName</td>
+                <td>@item.Department</td>
+                <td>
+                    <select>
+
+                        <option selected value="' + @item.PerformanceRating + '"> @item.PerformanceRating </option>' +
+                        
+                        <option value="Poor">Poor</option> 
+                        
+                        <option value="Satisfactory">Satisfactory</option>
+                        
+                        <option value="Good">Good</option>
+                        
+                        <option value="Excellent">Excellent</option>
+                        
+                    </select>
+                </td>
+        
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+

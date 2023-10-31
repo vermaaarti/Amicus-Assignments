@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+   
+    <p>Email: @ViewData["name"] </p> 
+</div>
+
+
+@*@if (User.IsInRole("admin"))
+{
+    var ds = User.GetRequestDetail();
+
+    return View(ds);
+}*@
+@if (User.IsInRole("admin"))
+{
+    <p>User is a admin.</p>
+}
+@if (User.IsInRole("planner"))
+{
+    <p>User is a planner.</p>
+}
+
+
+<p>To get the complete list of employees in JSON, visit here https://localhost:7271/Home/EmployeeDataList</p>
+
+
+<p>To get the complete list of employees in DataTable, visit here https://localhost:7271/Home/EmployeeList</p>
+
+
+<p>To get the filtered planner based list of employees in DataTable, visit here
+    https://localhost:7271/Home/FilterEmployeeData?plannerEmail=ruchir_verma@amicusglobal.com
+</p>
+
+<p>note:- only use the email value ruchir_verma@amicusglobal.com<br>
+   chetan_verma@amicusglobal.com<br />
+    ravi_kukreja@amicusglobal.com<br/>
+    piyush_bhagat@amicusglobal.com
+</p>
