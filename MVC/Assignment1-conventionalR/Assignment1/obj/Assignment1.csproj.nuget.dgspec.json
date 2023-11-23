@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\Assignment1.csproj": {}
+    "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\Assignment1.csproj": {}
   },
   "projects": {
-    "c:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\Assignment1.csproj": {
+    "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\Assignment1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\Assignment1.csproj",
+        "projectUniqueName": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\Assignment1.csproj",
         "projectName": "Assignment1",
-        "projectPath": "c:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\Assignment1.csproj",
+        "projectPath": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\Assignment1.csproj",
         "packagesPath": "C:\\Users\\aarti_verma\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\obj\\",
+        "outputPath": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-conventionalR\\Assignment1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aarti_verma\\AppData\\Roaming\\NuGet\\NuGet.Config",

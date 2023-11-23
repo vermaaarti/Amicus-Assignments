@@ -2052,11 +2052,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\customapps\\MVC-Assignment3\\MVC-Assignment3\\MVC-Assignment3.csproj",
+      "projectUniqueName": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\MVC-Assignment3\\MVC-Assignment3\\MVC-Assignment3.csproj",
       "projectName": "MVC-Assignment3",
-      "projectPath": "D:\\customapps\\MVC-Assignment3\\MVC-Assignment3\\MVC-Assignment3.csproj",
+      "projectPath": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\MVC-Assignment3\\MVC-Assignment3\\MVC-Assignment3.csproj",
       "packagesPath": "C:\\Users\\aarti_verma\\.nuget\\packages\\",
-      "outputPath": "D:\\customapps\\MVC-Assignment3\\MVC-Assignment3\\obj\\",
+      "outputPath": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\MVC-Assignment3\\MVC-Assignment3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aarti_verma\\AppData\\Roaming\\NuGet\\NuGet.Config",

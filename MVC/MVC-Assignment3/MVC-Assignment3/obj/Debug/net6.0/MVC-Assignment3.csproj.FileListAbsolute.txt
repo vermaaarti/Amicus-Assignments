@@ -65,3 +65,14 @@ D:\customapps\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\refint\MVC-Assign
 D:\customapps\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.pdb
 D:\customapps\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.genruntimeconfig.cache
 D:\customapps\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\ref\MVC-Assignment3.dll
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.csproj.AssemblyReference.cache
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.AssemblyInfoInputs.cache
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.AssemblyInfo.cs
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.csproj.CoreCompileInputs.cache
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.RazorAssemblyInfo.cache
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.RazorAssemblyInfo.cs
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.dll
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\refint\MVC-Assignment3.dll
+C:\Users\aarti_verma\Desktop\github-things\Amicus-Assignments\MVC\MVC-Assignment3\MVC-Assignment3\obj\Debug\net6.0\MVC-Assignment3.pdb

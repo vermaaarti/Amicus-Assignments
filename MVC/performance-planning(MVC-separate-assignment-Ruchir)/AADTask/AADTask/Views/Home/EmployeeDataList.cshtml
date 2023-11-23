@@ -1,0 +1,76 @@
+﻿@model List<AllEmployee>
+
+@{
+    ViewData["Title"] = "Employee_Data_List";
+}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--Data Table-->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="~/js/JavaScript.js"></script>
+
+<button type="button" id="saveDataButton" onclick="SaveEmployee(event)" class="btn btn-info m-2">Save as Draft</button>
+
+<!--<button type="button" onclick="SaveEmployee(event)" class="btn btn-info m-2">Submit</button>-->
+
+@if (User.IsInRole("planner"))
+{
+    <button type="button" onclick="Submit(event)" class="btn btn-info m-2">Submit</button>
+}
+<!--<button type="button" onclick="Submit(event)" class="btn btn-info m-2">Submit</button>-->
+@if (User.IsInRole("admin"))
+{
+    <button type="button" onclick="AddNewEmployee(event)" class="btn btn-info m-2">Add New Employee</button>
+}
+
+<table id="dataTable" class="display" style="width:100%">
+
+    <thead>
+        <tr>
+           
+            <th>Employee Name</th>
+            <th>Employee Email</th>
+            <th>Manager Name</th>
+            <th>Planner Name</th>
+            <th>Department</th>
+            <th>Performance Rating</th>
+            <th> Status of Planning</th>
+        
+        </tr>
+    </thead>
+    <tbody>
+       @* @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeName</td>
+                <td>@item.EmployeeEmail</td>
+                <td>@item.ManagerName</td>
+                <td>@item.PlannerName</td>
+                <td>@item.Department</td>
+                <td>
+                    <select>
+
+                        <option selected value="' + @item.PerformanceRating + '"> @item.PerformanceRating </option>' +
+                        
+                        <option value="Poor">Poor</option> 
+                        
+                        <option value="Satisfactory">Satisfactory</option>
+                        
+                        <option value="Good">Good</option>
+                        
+                        <option value="Excellent">Excellent</option>
+                        
+                    </select>
+                </td>
+                <td>@item.StatusOfPlanning</td>
+            </tr>
+        }  *@
+    </tbody>
+</table>
+
+
+
+
+
+

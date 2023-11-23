@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\customapps\\MVCAssignment2\\MVCAssignment2\\MVCAssignment2.csproj",
+      "projectUniqueName": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\MVCAssignment2\\MVCAssignment2\\MVCAssignment2.csproj",
       "projectName": "MVCAssignment2",
-      "projectPath": "D:\\customapps\\MVCAssignment2\\MVCAssignment2\\MVCAssignment2.csproj",
+      "projectPath": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\MVCAssignment2\\MVCAssignment2\\MVCAssignment2.csproj",
       "packagesPath": "C:\\Users\\aarti_verma\\.nuget\\packages\\",
-      "outputPath": "D:\\customapps\\MVCAssignment2\\MVCAssignment2\\obj\\",
+      "outputPath": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\MVCAssignment2\\MVCAssignment2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aarti_verma\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -278,7 +278,7 @@ END;  */
 
 
 ----------------------------------------------------------------------------------------------------------------------
------Procedure for single employee data addition----------------------------------------------------------------------
+-----Procedure for adding data  into the datatable of single employee into the table after being edited(on clicking on name(hyperlink) )----------------------------------------------------------------------
 
 /*CREATE PROCEDURE EmployeeUpdatedData
 @EmployeeJson  NVARCHAR(MAX) 

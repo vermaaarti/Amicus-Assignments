@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\customapps\\Assignment1-attributeR\\Assignment1-attributeR\\Assignment1-attributeR.csproj",
+      "projectUniqueName": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-attributeR\\Assignment1-attributeR\\Assignment1-attributeR.csproj",
       "projectName": "Assignment1-attributeR",
-      "projectPath": "D:\\customapps\\Assignment1-attributeR\\Assignment1-attributeR\\Assignment1-attributeR.csproj",
+      "projectPath": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-attributeR\\Assignment1-attributeR\\Assignment1-attributeR.csproj",
       "packagesPath": "C:\\Users\\aarti_verma\\.nuget\\packages\\",
-      "outputPath": "D:\\customapps\\Assignment1-attributeR\\Assignment1-attributeR\\obj\\",
+      "outputPath": "C:\\Users\\aarti_verma\\Desktop\\github-things\\Amicus-Assignments\\MVC\\Assignment1-attributeR\\Assignment1-attributeR\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aarti_verma\\AppData\\Roaming\\NuGet\\NuGet.Config",
