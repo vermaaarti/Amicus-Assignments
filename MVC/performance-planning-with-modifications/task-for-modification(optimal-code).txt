@@ -1,0 +1,42 @@
+1. Proper routing on app start  -------------------------------------------done
+2. Correction of datatable feed      ------------------------done ---
+ 
+3. function saveAsDraft()            ------------------------------done
+   how we can use map function       ------------------------------done
+ 
+4. make separete js files for each page.            ----------------------------done ---
+   dont use global array in employee detail page        --------------------------done ---
+ 
+5. EmployeeId hidden field    ------------------------done ---
+ 
+6. var employeeid = $(`empId`).val()   
+       obj.EmployeeId  = employeeid ;
+ 
+ 
+procedure :                     ------------------------------done --------------------------------------------
+ 
+   @EmployeeId
+ 
+ 
+  If(@EmployeeId=0)
+ 
+   INSERT
+ 
+ELSE
+ 
+   UPDATE
+ 
+ 
+7. Bring status of planning of that particular employee in ahidden field    ------------------done
+8 clicking on save , will check if the status if draft or not   ------------------------done ---   
+ 
+9. Alternative :  showHideSaveDetailButton()
+ 
+ 
+function showHideSaveDetailButton()
+{
+  retrieve status from hidden field
+ 
+  on that basis show or hide the button
+ 
+}

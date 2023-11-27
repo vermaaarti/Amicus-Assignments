@@ -295,18 +295,53 @@ namespace AADTask.Controllers
             return returnDataTable;
         }
 
+        public DataTable AddUpdateEmployee(AllEmployee employeeList)
+
+        {
+
+            var returnDataTable = new DataTable();
+            var JSONData = JsonConvert.SerializeObject(employeeList);
+            using (SqlConnection connection = new SqlConnection(connectionString))
+
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = connection;
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.CommandText = "InsertOrUpdateEmployee"; // Use the name of your stored procedure
+
+                cmd.Parameters.Add(new SqlParameter("@EmpJson", JSONData));
+
+                SqlDataAdapter dataAdp = new SqlDataAdapter(cmd);
+
+                dataAdp.Fill(returnDataTable);
+
+                connection.Close();
+
+            }
+            return returnDataTable;
+
+
+        }
+
         [HttpPost]
         public IActionResult AddToTable(AllEmployee empList)
         {
-            if (empList.EmployeeId == 0)
-            {
-                AddNewEmployee(empList);
-            }
-            else
-            {
-         
-                    UpdateSingleEmployee(empList); 
-            }
+            AddUpdateEmployee(empList);
+
+            /* if (empList.EmployeeId == 0)
+             {
+                 AddNewEmployee(empList);
+             }
+             else
+             {
+
+                     UpdateSingleEmployee(empList); 
+             }*/
             return Ok();
         }
 
