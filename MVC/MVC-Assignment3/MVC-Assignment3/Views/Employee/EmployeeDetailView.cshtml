@@ -5,7 +5,6 @@
 @model EmployeeList
 
 
-
 @using (Html.BeginForm("AddToTable", "Employee", FormMethod.Post))
 {
     @Html.LabelFor(Model => Model.EmployeeName)
@@ -13,14 +12,13 @@
 
 
 
-    @Html.LabelFor(Model => Model.EmployeeId)
+   @* @Html.LabelFor(Model => Model.EmployeeId, new { @class = "form-control d-none" })*@
     @Html.TextBoxFor(Model => Model.EmployeeId, new { @class = "form-control d-none" ,  @id = "employeeId"})
     
-    @Html.TextBoxFor(Model => Model.DepartmentId, new { @class = "form-control d-none" ,  @id = "employeeId"})
+    @Html.TextBoxFor(Model => Model.DepartmentId, new { @class = "form-control d-none" ,  @id = "departmentId"})
 
 
-
-    @Html.TextBoxFor(Model => Model.SalaryInformatonId, new { @class = "form-control d-none" ,  @id = "employeeId"})
+    @Html.TextBoxFor(Model => Model.SalaryInformatonId, new { @class = "form-control d-none" ,  @id = "salaryinfoId"})
 
     @Html.LabelFor(Model => Model.AmountPerYear)
     @Html.TextBoxFor(Model => Model.AmountPerYear, new { @class = "form-control",  @id = "amountPerYear" })
