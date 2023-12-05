@@ -1,0 +1,72 @@
+1. Approver :  dropdown
+2. EmployeeTable == >  ApproverId
+ 
+3. New Table :   ApprovalTask
+ 
+  ApprovalTaskId, EmployeeId, PlannerId, ApproverId , ApprovalStatus, CreatedOn(default : GETUTCDATE())  --> (Assigned, Approved(possible values))
+ 
+ 
+4. When Planner hits submit button ==>  save the employee planning detauts  with status as InProgress ==> create entries in approval task table.
+ 
+5. Approval Task (Visible only to approvers)
+ 
+ 
+   will see all the tasks currently assigned to the approver.
+   (EmployeeName, PlannerName, Status)
+ 
+   Button at top -> [Approve]
+
+   Clicking on the button, will approve the task and change the planning sttaus of employee to completed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aarti is a loggen in user
+ 
+ 
+getDataForApproverPage
+(
+  @EmailAddress
+)
+ 
+ 
+fetch @LoggedUserId from    @EmailAddress
+ 
+ 
+ 
+select 
+  -
+-
+-
+ 
+from ApproverTask a
+inner join with employee b
+ 
+where a.approverId = @LoggedUserId 
+and
+a.status = 'Assigned'
+ 
+ 
+clicked approve =-->
+ 
+ 
+update approver task --> with "Approved" --> mark employee statys as "completed"
+ 
+ 
+----
+
+
+
+
+
