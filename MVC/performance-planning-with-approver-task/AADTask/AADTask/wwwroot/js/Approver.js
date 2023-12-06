@@ -1,17 +1,15 @@
-﻿ let ApproverArray = [];
+﻿let ApproverArray = [];
 
 
 $(document).ready(function () {
 
     let approverdataTable = intilizeApproverDataTable(ApproverArray);
-    loadApproverDataIntoDataTable( approverdataTable );
+    loadApproverDataIntoDataTable(approverdataTable);
 
 });
 
 
-
-
-function loadApproverDataIntoDataTable(approverdataTable ) {
+function loadApproverDataIntoDataTable(approverdataTable) {
 
     $.ajax({
         type: 'GET',
@@ -39,17 +37,17 @@ function intilizeApproverDataTable(ApproverArray) {
     return new DataTable('#dataTable2', {
         data: ApproverArray,
         columns: [
-            
+
             {
                 data: "employeeName",
 
-             },
-           
+            },
+
             {
                 data: "plannerName",
             },
-             {
-                 data: "approverName",
+            {
+                data: "approverName",
             },
             {
                 data: "approvalStatus",
@@ -58,7 +56,7 @@ function intilizeApproverDataTable(ApproverArray) {
                 data: "createdOn",
 
             },
-           
+
 
         ],
         lengthChange: false,
@@ -73,42 +71,27 @@ function intilizeApproverDataTable(ApproverArray) {
 function ChangeAssignedStatus(event) {
     event.preventDefault();
 
-        $.ajax({
-            type: 'POST',
-            url: '/Home/UpdateAssignedStatusToApproved',
-            data: { employeeList: ApproverArray },
-            success: function () {
-               alert('Status of approval changed from assigned to approved');
-            
-                console.log(ApproverArray);
-               location.reload(true);
-                //window.location.href = "/Home/GetEmployeeData/";
+    $.ajax({
+        type: 'POST',
+        url: '/Home/UpdateAssignedStatusToApproved',
+        data: { employeeList: ApproverArray },
+        success: function () {
+            alert('Status of approval changed from assigned to approved');
 
-            },
-            error: function (errorThrown, textStatus, xhr) {
-                console.log('Error in Operation');
-            }
-        });
-   
+            console.log(ApproverArray);
+            location.reload(true);
+            window.location.href = "/Home/GetEmployeeData/";
+
+        },
+        error: function (errorThrown, textStatus, xhr) {
+            console.log('Error in Operation');
+        }
+    });
+
 }
 
 
 function GoToApproval(event) {
     event.preventDefault();
-
-    // var ApproverArray = globalArray.concat(ApproverArray);
-   /* $.ajax({
-        type: 'POST',
-        url: '/Home/AddDataIntoTaskTableForResult',
-        data: { ApproverArray },
-        success: function () {
-            console.log("Data sent successfully");
-
-        },
-        error: function (errorThrown, textStatus, xhr) {
-            console.log('Error in operation: ' + errorThrown);
-        }
-    });*/
-
     window.location.href = "/Home/ApproverView/";
 }

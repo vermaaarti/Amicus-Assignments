@@ -155,7 +155,7 @@ drop table EmployeeMaster_arti
 
 insert into EmployeeMaster_arti(EmployeeEmail, EmployeeName, ManagerId, PlannerId, ApproverId, Department, IsAdmin, PerformanceRatingId, PerformanceRating, StatusOfPlanning, performanceChallenges, IsEligibleForPlanning)  
 values
-('aarti_verma@amicusglobal.com', 'Aarti', 2, 5, 5, 'CS', 1, 1,'Poor', 'draft', 'Training Required', 0),
+('aarti_verma@amicusglobal.com', 'Aarti', 2, 8, 5, 'CS', 1, 1,'Poor', 'draft', 'Training Required', 0),
 ('ruchir_verma@amicusglobal.com', 'Ruchir', 4, 8, 7, 'CS', 0, 2, 'Satisfactory', 'draft','Was/Is in PIP', 1),
 ('sharma_srishti@amicusglobal.com', 'Srishti', 4, 8, 7, 'IT', 2, 2, 'Poor', 'draft','Training Required', 1),
 ('ravi_kukreja@amicusglobal.com', 'Ravi', 4, 8, 7, 'CS', 2,  4, 'Excellent', 'draft', 'Was/Is in PIP', 1),
@@ -163,7 +163,7 @@ values
 ('avartika_verma@amicusglobal.com', 'Avartika', 1, 8 , 7, 'IT', 2, 2, 'Poor', 'draft', 'Was/Is in PIP', 1),
 ('rachana_k@amicusglobal.com', 'Rachana', 9, 4 , 2, 'CS', 0, 2, 'Good', 'draft', 'Training Required', 1),
 ('vivek_purbey@amicusglobal.com', 'Vivek', 9, 4 , 2 , 'IT', 2, 3, 'Good', 'draft', 'Was/Is in PIP', 1),
-('yash_bakshi@amicusglobal.com', 'Yash', 5, 5, 5, 'CS', 2, 2, 'Good', 'draft', 'Training Required', 1)
+('yash_bakshi@amicusglobal.com', 'Yash', 5, 8, 5, 'CS', 2, 2, 'Good', 'draft', 'Training Required', 1)
 
 
 select * from EmployeeMaster_arti
@@ -465,41 +465,6 @@ select * from EmployeeMaster_arti
 --///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/*CREATE PROCEDURE AddDataIntoApproverTableD
-    @EmpJson NVARCHAR(MAX),
-    @ApproverEmail NVARCHAR(255)
-AS
-BEGIN
-    DECLARE @ApproverId INT;
-	DECLARE @EmployeeId INT;
- 
-    -- Get the ApproverId based on the provided email
-    SET @ApproverId = (select EmployeeId
-    FROM EmployeeMaster_arti
-    WHERE EmployeeEmail = @ApproverEmail)
- 
-    -- Insert data into ApprovalTask_aarti table
-    INSERT INTO ApprovalTask_aarti (EmployeeId, PlannerId, ApproverId, ApprovalStatus, CreatedOn)
-    SELECT
-        EmployeeId,
-        PlannerId,
-        ApproverId,
-        'Assigned',
-        GETUTCDATE()
-    FROM OPENJSON(@EmpJson)
-    WITH (
-        EmployeeId INT '$.EmployeeId',
-        PlannerId INT '$.PlannerId',
-        ApproverId INT '$.ApproverId'
-    )
-    WHERE ApproverId = @ApproverId;
-	END
-
-EXEC AddDataIntoApproverTableD @EmpJson = '{"EmployeeId": 4, "PlannerId": 2, "ApproverId": 5}', @ApproverEmail = 'chandan_soni@amicusglobal.com';*/
-
-
-
-
 
 CREATE PROCEDURE AddDataIntoApproverTableF
 @EmpJson NVARCHAR(MAX),
@@ -526,6 +491,7 @@ BEGIN
  END
 
 
+ --///////////////////////////////////////////////// execute ////////////////////////////////////////////////////////////////////////////////////
  
  DECLARE @EmpJson NVARCHAR(MAX) = '{"EmployeeId": 2, "PlannerId": 5, "ApproverId": 5}'; 
 DECLARE @ApproverEmail NVARCHAR(MAX) = 'chandan_soni@amicusglobal.com'; 
@@ -533,71 +499,6 @@ DECLARE @ApproverEmail NVARCHAR(MAX) = 'chandan_soni@amicusglobal.com';
 EXEC AddDataIntoApproverTableF @EmpJson, @ApproverEmail;
 
 
-select * from ApprovalTask_aarti 
-
-
-
-
-
-
-
-
-
-
- CREATE PROCEDURE AddDataIntoApproverTableH
- @ApproverEmail NVARCHAR(MAX)
- AS
-BEGIN
-    DECLARE @ApproverId INT;
- 
-    -- Get the ApproverId based on the provided email
-    SELECT @ApproverId = EmployeeId FROM EmployeeMaster_arti WHERE EmployeeEmail = @ApproverEmail;
- 
-    -- Insert data into ApprovalTask_aarti table
-    INSERT INTO ApprovalTask_aarti (EmployeeId, PlannerId, ApproverId, ApprovalStatus, CreatedOn)
-    SELECT EmployeeId, PlannerId, ApproverId, 'Assigned', GETUTCDATE()
-    FROM OPENJSON('{"EmployeeId": 1, "PlannerId": 5, "ApproverId": 5}')
-    WITH (
-        EmployeeId INT '$.EmployeeId',
-        PlannerId INT '$.PlannerId',
-        ApproverId INT '$.ApproverId'
-    )
-    WHERE ApproverId = @ApproverId;
-END
-
-
-
-
-
-
-
-/*CREATE PROCEDURE AddDataIntoApproverTableJ
- @ApproverEmail NVARCHAR(MAX)
- AS
-BEGIN
-DECLARE @ApproverId INT;
- 
-    -- Get the ApproverId based on the provided email
-    SELECT @ApproverId = EmployeeId FROM EmployeeMaster_arti WHERE EmployeeEmail = @ApproverEmail;
-
- INSERT INTO ApprovalTask_aarti (EmployeeId, PlannerId, ApproverId, ApprovalStatus, CreatedOn)
-  SELECT EmployeeId, PlannerId, ApproverId, 'Assigned', GETUTCDATE()
-
-  from EmployeeMaster_arti where ApproverId = @ApproverId ;
-END*/
-
-
---///////////////////////////////////////////////////execute /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-EXEC AddDataIntoApproverTableH  @ApproverEmail = 'chandan_soni@amicusglobal.com';
-
-
-select * from EmployeeMaster_arti
-
-select * from ApprovalTask_aarti 
-
-
-drop table ApprovalTask_aarti 
 
 
 
@@ -645,6 +546,10 @@ select * from EmployeeMaster_arti
 
 select * from ApprovalTask_aarti 
 
+
+
+
+
  
 --///////////////////////////////////procedure to mark approvalStatus as approved and performance rating as completed  ///////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -670,6 +575,8 @@ BEGIN
            ON aprl.ApprovalTaskId = tta.ApprovalTaskId;
     DROP TABLE #TempTable_arti;
 END
+
+
 
 --////////////////////////////  execute ////////////////////////////////////////////////////////////////////////////////////////////////////
 

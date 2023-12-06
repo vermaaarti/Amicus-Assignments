@@ -1,9 +1,8 @@
 ﻿
 
+
+
 // fn to save employees data by planner when submit button is clicked
-$(document).ready(function () {
-    sendDataToTaskTable();
-});
 function Submit(event) {
     event.preventDefault();
 
@@ -11,7 +10,6 @@ function Submit(event) {
     // Check if all performance ratings are selected
     var allRatingsSelected = checkAllRatingsSelected();
     var allChallengeSelected = checkAllChallengesSelected();
-    //var insertDataIntoDataTable = sendDataToTaskTable() ;
 
     if (allRatingsSelected && allChallengeSelected) {
         SaveEmployee(event);
@@ -21,6 +19,7 @@ function Submit(event) {
             url: '/Home/UpdateStatusToCompleted',
             data: { employeeList: globalArray },
             success: function () {
+             
                 alert('Status of planning changed to InProgress.');
                
                // sendDataToTaskTable();
@@ -38,6 +37,23 @@ function Submit(event) {
         // If not all ratings are selected, show an alert
         alert('Some performance ratings/challenges are not selected. Please select all ratings before submitting.');
     }
+
+    $.ajax({
+        type: 'POST',
+        url: '/Home/AddDataIntoTaskTableForResult',
+        data: {employeeList:globalArray},
+        success: function () {
+          console.log("Data added to ApprovalTask_aarti table successfully.");
+           
+        },
+        error: function (errorThrown, textStatus, xhr) {
+            console.log('Error in operation: ' + errorThrown);
+        }
+    });
+
+   // CheckStatusOfPlanningIsDraft();
+   // $("#btnToSubmitStatusOfPlanning").hide();
+
 }
 
 function checkAllRatingsSelected() {
@@ -82,29 +98,12 @@ function checkAllChallengesSelected() {
 
 //fn to send data into the task table
 
-function sendDataToTaskTable() {
-   /* $.ajax({
-        type: 'POST',
-        url: '/Home/AddDataIntoTaskTableForResult',
-        data: { employeeList: ApproverArray },
-        success: function () {
-
-            console.log("my array " + ApproverArray + " is this");
-            // location.reload(true);
-            return true;
-
-        },
-        error: function (errorThrown, textStatus, xhr) {
-            console.log('Error in Operation');
-        }
-    });*/
-
-   
+/*function sendDataToTaskTable() {
+      
         $.ajax({
             type: 'POST',
             url: '/Home/AddDataIntoTaskTableForResult',
-           success: function () {
-                console.log("Data added to ApprovalTask_aarti table successfully.");
+            success: function () {
                
             },
             error: function (errorThrown, textStatus, xhr) {
@@ -113,4 +112,18 @@ function sendDataToTaskTable() {
         });
     
 
-}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

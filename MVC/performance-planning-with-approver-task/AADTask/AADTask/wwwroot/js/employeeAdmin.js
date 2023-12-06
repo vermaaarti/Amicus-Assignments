@@ -19,6 +19,9 @@ function loadDataIntoDataTable({ dataTable }) {
             dataTable.rows.add(data).draw();
 
             console.log(globalArray);
+            CheckStatusOfPlanningIsDraft(globalArray);
+
+          
 
         },
         error: function (errorThrown, textStatus, xhr) {
@@ -28,7 +31,6 @@ function loadDataIntoDataTable({ dataTable }) {
     });
 }
 
-console.log(globalArray.length);
 
 
 
@@ -180,7 +182,6 @@ function SaveAsDraft(employeeId) {
 
 
 // fn to redirect into method to add new employee
-
 function AddNewEmployee(event) {
 
     event.preventDefault();
@@ -189,6 +190,40 @@ function AddNewEmployee(event) {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+function CheckStatusOfPlanningIsDraft(globalArray) {
+ 
+   /* for (var i = 0; i < globalArray.length; i++) {
+        if (globalArray[i].statusOfPlanning === 'InProgress') {
+            console.log("hii there");
+            $("#btnToSubmitStatusOfPlanning").hide();
+        }
+    }*/
+    globalArray.forEach(function (item) {
+        if (item.statusOfPlanning === 'InProgress') {
+            console.log("hii there");
+            $("#btnToSubmitStatusOfPlanning").hide();
+        }
+    });
+    
+}
+
+
+
+
+
+
+
+
 
 
 

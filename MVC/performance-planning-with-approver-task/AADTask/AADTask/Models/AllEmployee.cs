@@ -32,14 +32,6 @@ namespace AADTask.Models
         public string? StatusOfPlanning { get; set; }
 
 
-
-       /* ApprovalTaskId INT IDENTITY(1,1) PRIMARY KEY,
-    EmployeeId INT, 
-	PlannerId INT,
-    ApproverId INT,
-	ApprovalStatus NVARCHAR(255),
-	CreatedOn*/
-
       public int ApprovalTaskId  { get; set; }
          public int ApproverId { get; set; }
       public string? ApproverName { get; set; }
